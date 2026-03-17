@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects"
+  },
+  "hero": {
+    "role": "Frontend Developer & Data Analyst",
+    "tagline": "Building solutions at the intersection of Technology and Analytics.",
+    "contact": "Contact Me",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  },
+  "about": {
+    "title": "/ About Me",
+    "p1": "I am a Frontend Developer and Data Analyst with a solid track record in high-demand corporate environments like PwC Argentina and Grupo Sancor Seguros. My differential value lies in combining business logic and process management with modern software development.",
+    "p2": "What do I bring to your team?",
+    "bullet1": "🚀 Hybrid Vision: I don't just write code; I understand the impact of software on operational and financial processes.",
+    "bullet2": "📈 Real Results: I have led optimizations that reduced operational times by 20% and administrative flows by 30%.",
+    "bullet3": "🧠 Innovation: Certified in Microsoft and SAP technologies, I integrate AI and data analysis to create smart and efficient user experiences.",
+    "stack_title": "My Tech Stack:",
+    "stack_frontend": "💻 Frontend: React, JavaScript, HTML5, CSS3, UX/UI, Responsive Design.",
+    "stack_data": "📊 Data & AI: Power BI, Azure AI Studio, Data Analysis.",
+    "stack_tools": "⚙️ Tools: Git, GitHub, Agile Methodologies, SAP, Microsoft Copilot.",
+    "goal": "I seek to join teams that value technological innovation to generate real business impact."
+  },
+  "experience": {
+    "title": "/ Experience",
+    "jobs": [
+      {
+        "id": "pwc",
+        "role": "Contact Center Specialist",
+        "company": "PwC Argentina",
+        "period": "Dec 2022 - Jun 2025 (2 yrs 7 mos)",
+        "location": "Argentina · Hybrid",
+        "description": "Provided support to US clients on tax compliance (Form K1) and account management, ensuring high standards of regulatory accuracy. Reduced average response times by 20% by optimizing workflows, maintaining a 95% Customer Satisfaction (CSAT) score. Managed data quality in CRM to ensure metric compliance and a consistent user experience.",
+        "skills": ["Corporate Customer Service", "CRM", "Process Optimization", "Data Analysis", "Regulatory Compliance"]
+      },
+      {
+        "id": "sancor",
+        "role": "Insurance Operations & Process Analyst",
+        "company": "Grupo Sancor Seguros",
+        "period": "Jan 2013 - Feb 2022 (9 yrs 2 mos)",
+        "location": "Argentina · On-site",
+        "description": "Managed the comprehensive evaluation of claims, coordinating with adjusters and applying technical and legal criteria for effective claim resolution. Led document management and digitization initiatives, ensuring efficient organization of files and inventories, facilitating the transition to paperless processes. Monitored payments to vendors and performed billing audits, optimizing financial processes and reducing administrative time.",
+        "skills": ["Claims Management", "Document Digitization", "Process Analysis", "Vendor Management", "Problem Solving"]
+      },
+      {
+        "id": "escribania",
+        "role": "Administrative Assistant",
+        "company": "Escribanía Boymorto - Pereiro",
+        "period": "Jul 2011 - Jan 2013 (1 yr 7 mos)",
+        "location": "Argentina · On-site",
+        "description": "Managed legal documentation and drafted certifications, ensuring strict compliance with banking and regulatory standards. Guaranteed the proper processing of procedures with a high level of accuracy and confidentiality.",
+        "skills": ["Document Management", "Banking Regulations", "Attention to Detail"]
+      },
+      {
+        "id": "al",
+        "role": "Administrative Assistant",
+        "company": "AL: Organización de Servicios Judiciales",
+        "period": "Feb 2008 - Mar 2011 (3 yrs 2 mos)",
+        "location": "Argentina · On-site",
+        "description": "Provided legal-administrative support for judicial files and organized complex legal documentation. Collaborated with legal teams to ensure compliance with current regulatory frameworks.",
+        "skills": ["Legal Support", "Organization", "Teamwork"]
+      }
+    ]
+  },
+  "education": {
+    "title": "/ Education",
+    "items": [
+      {
+        "id": "dh",
+        "degree": "Certified Tech Developer",
+        "institution": "Digital House",
+        "period": "May 2022 - Apr 2024",
+        "description": "Intensive training in software development focusing on programming, databases, web architecture, UX/UI, and agile methodologies. The program centered on building scalable digital solutions with a focus on usability, design, and complex problem-solving.",
+        "skills": ["Programming", "Databases & Web Architecture", "UX/UI", "Agile Methodologies"]
+      },
+      {
+        "id": "coderhouse",
+        "degree": "Web Designer",
+        "institution": "Coderhouse",
+        "period": "Mar 2019 - May 2019",
+        "description": "Practical specialization in designing and building modern websites using HTML, CSS, and JavaScript. Main focus on usability, user experience (UX), and responsive design.",
+        "skills": ["Web Design", "HTML/CSS/JS", "Responsive Design", "UX"]
+      },
+      {
+        "id": "uade",
+        "degree": "B.A. in Multimedia Design",
+        "institution": "UADE",
+        "period": "Mar 2014 - Jun 2016",
+        "description": "Studies focused on graphic design, visual communication, applied creativity, and audiovisual production. Training strengthened aesthetic, conceptual, and technical vision within digital environments.",
+        "skills": ["Graphic Design", "Audiovisual Production", "Digital Design", "Multimedia Tools"]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "/ Certifications",
+    "items": [
+      "SAP: Foundations of Business Analysis",
+      "SAP: Professional Fundamentals",
+      "Microsoft: Artificial intelligence for business leaders",
+      "Microsoft Copilot for productivity",
+      "EF SET English Certificate 81/100 (C2 Proficient)",
+      "Microsoft: Fundamentals of the systems administration career",
+      "Microsoft: Professional Foundations of Generative AI",
+      "Microsoft: Professional fundamentals of business analysis",
+      "Microsoft: Professional fundamentals of administrative assistance",
+      "Microsoft: Professional Foundations of Project Management",
+      "Microsoft: Professional fundamentals of software development",
+      "Microsoft: Professional fundamentals in sustainable technology",
+      "Microsoft: Human skills in the AI era",
+      "Microsoft: Artificial intelligence for managers",
+      "Microsoft: Professional Certificate of Security Fundamentals",
+      "Microsoft: Develop your productivity skills with generative AI",
+      "Microsoft: Azure AI Essentials Professional Certificate",
+      "Microsoft: Professional Foundations of Data Analysis"
+    ]
+  },
+  "projects": {
+    "title": "/ Projects",
+    "subtitle": "System Override: Work in Progress",
+    "coming_soon": "Modules currently descending from orbital servers. Check back later."
+  },
+  "ui": {
+    "loading": "ACCESSING SYSTEM...",
+    "access_granted": "ACCESS GRANTED.",
+    "theme_switch": "Theme Interface",
+    "lang_switch": "Language Module",
+    "build": "Build Version 1.0.0"
+  }
+}
