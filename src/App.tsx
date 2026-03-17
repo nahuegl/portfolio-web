@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-
 import Navbar from './components/layout/Navbar';
 import LoadingScreen from './components/ui/LoadingScreen';
 import Hero from './components/sections/Hero';
 import Experience from './components/sections/Experience';
 import Education from './components/sections/Education';
+import Certifications from './components/sections/Certifications';
 import Projects from './components/sections/Projects';
+import GlitchBackground from './components/ui/GlitchBackground';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,17 +37,24 @@ function App() {
   };
 
   if (loading) {
-    return <LoadingScreen />;
+    return (
+      <>
+        <GlitchBackground />
+        <LoadingScreen />
+      </>
+    );
   }
 
   return (
     <div className="min-h-screen font-mono relative overflow-hidden text-sm md:text-base">
+      <GlitchBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       
-      <main className="max-w-4xl mx-auto px-6 pt-24 pb-12">
+      <main className="max-w-4xl mx-auto px-6 pt-24 pb-12 relative z-10">
         <Hero />
         <Experience />
         <Education />
+        <Certifications />
         <Projects />
       </main>
 

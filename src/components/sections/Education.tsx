@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { GraduationCap, Award } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 
 export default function Education() {
   const { t } = useTranslation();
@@ -13,8 +13,6 @@ export default function Education() {
     description: string;
     skills: string[];
   }>;
-
-  const certifications = t('certifications.items', { returnObjects: true }) as string[];
 
   return (
     <section className="py-16 md:py-24" id="education">
@@ -32,9 +30,9 @@ export default function Education() {
           <div className="h-[1px] flex-1 bg-[var(--border-color)] opacity-50 ml-4" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Education timeline */}
-          <div className="lg:col-span-2 relative border-l-2 border-[var(--border-color)] ml-3 md:ml-4 flex flex-col gap-10">
+          <div className="relative border-l-2 border-[var(--border-color)] ml-3 md:ml-4 flex flex-col gap-10">
             {educationItems.map((edu, index) => (
               <motion.div 
                 key={edu.id}
@@ -75,36 +73,6 @@ export default function Education() {
               </motion.div>
             ))}
           </div>
-
-          {/* Certifications Sidebar */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col gap-6"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <Award className="text-[var(--color-brand-magenta)]" size={24} />
-              <h3 className="text-xl font-bold font-mono text-[var(--text-color)] uppercase tracking-wider">
-                {t('certifications.title')}
-              </h3>
-            </div>
-            
-            <div className="flex flex-col gap-2 overflow-y-auto max-h-[500px] pr-2 custom-scrollbar">
-              {certifications.map((cert, index) => (
-                <div 
-                  key={index}
-                  className="p-3 border border-[var(--border-color)] text-sm font-mono bg-[var(--text-color)]/5 hover:border-[var(--color-brand-magenta)] transition-colors group cursor-default"
-                >
-                  <span className="text-[var(--color-brand-magenta)] font-bold mr-2 opacity-50 group-hover:opacity-100 transition-opacity">
-                    &gt;
-                  </span>
-                  {cert}
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </motion.div>
     </section>

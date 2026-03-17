@@ -98,12 +98,17 @@
   },
   "certifications": {
     "title": "/ Certifications",
-    "items": [
+    "featured_title": "Key Certifications",
+    "others_title": "Additional Courses",
+    "featured": [
       "SAP: Foundations of Business Analysis",
-      "SAP: Professional Fundamentals",
-      "Microsoft: Artificial intelligence for business leaders",
-      "Microsoft Copilot for productivity",
+      "Microsoft: Azure AI Essentials Professional Certificate",
       "EF SET English Certificate 81/100 (C2 Proficient)",
+      "Microsoft: Artificial intelligence for business leaders"
+    ],
+    "others": [
+      "SAP: Professional Fundamentals",
+      "Microsoft: Copilot for productivity",
       "Microsoft: Fundamentals of the systems administration career",
       "Microsoft: Professional Foundations of Generative AI",
       "Microsoft: Professional fundamentals of business analysis",
@@ -115,7 +120,6 @@
       "Microsoft: Artificial intelligence for managers",
       "Microsoft: Professional Certificate of Security Fundamentals",
       "Microsoft: Develop your productivity skills with generative AI",
-      "Microsoft: Azure AI Essentials Professional Certificate",
       "Microsoft: Professional Foundations of Data Analysis"
     ]
   },

@@ -20,7 +20,7 @@ function LoadingScreen() {
   }, []);
 
   return (
-    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center font-mono z-50 overflow-hidden select-none text-white">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center font-mono z-50 overflow-hidden select-none text-white">
       {/* Glitching overlay text effect */}
       <motion.div 
         initial={{ opacity: 0 }}
