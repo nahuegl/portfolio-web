@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, FileDown } from 'lucide-react';
 import perfilImg from '../../assets/perfil-nahuel.png';
 
 export default function Hero() {
@@ -83,11 +83,20 @@ export default function Hero() {
             {t('hero.email')}
           </a>
 
+          <a
+            href="/CV-Nahuel-2026.pdf"
+            download="Nahuel_CV_2026.pdf"
+            className="flex items-center gap-2 group border border-[var(--color-brand-magenta)] bg-[var(--color-brand-magenta)]/10 hover:bg-[var(--color-brand-magenta)]/20 px-5 py-3 transition-colors text-sm uppercase tracking-widest font-bold text-[var(--color-brand-magenta)]"
+          >
+            <FileDown size={16} />
+            {t('hero.download_cv')}
+          </a>
+
           <a 
             href="https://github.com/nahuegl" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 p-3 border border-[var(--border-color)] hover:border-[var(--color-brand-magenta)] hover:text-[var(--color-brand-magenta)] hover:bg-[var(--color-brand-magenta)]/10 transition-colors"
+            className="flex items-center gap-2 p-3 border border-[var(--border-color)] hover:border-[var(--color-brand-cyan)] hover:text-[var(--color-brand-cyan)] hover:bg-[var(--color-brand-cyan)]/10 transition-colors"
           >
             <Github size={20} />
           </a>
