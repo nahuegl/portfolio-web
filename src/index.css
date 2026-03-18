@@ -1,48 +1,50 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-brand-cyan: #00ffff;
-  --color-brand-magenta: #ff00ff;
-  --color-brand-yellow: #ffff00;
+  /* Softer neon colors */
+  --color-brand-cyan: #0bd3d3;
+  --color-brand-magenta: #f92672;
+  --color-brand-yellow: #f4dd51;
   
-  --color-bg-dark: #050505;
+  /* Less aggressive backgrounds */
+  --color-bg-dark: #09090b;
   --color-bg-darker: #000000;
-  --color-bg-light: #f5f5f5;
-  --color-bg-lighter: #ffffff;
   
-  --color-fg-dark: #f0f0f0;
-  --color-fg-muted-dark: #888888;
-  --color-fg-light: #111111;
-  --color-fg-muted-light: #666666;
+  /* Very smooth off-white/gray for Light mode (Not aggressive pure white) */
+  --color-bg-light: #e2e8f0;
+  --color-bg-lighter: #f8fafc;
   
-  /* Accent colors mapping based on mode, but tailwind class can be used */
+  --color-fg-dark: #f8fafc;
+  --color-fg-muted-dark: #94a3b8;
+  
+  /* Softer blacks/grays for text in Light mode */
+  --color-fg-light: #0f172a;
+  --color-fg-muted-light: #475569;
+  
   --font-mono: 'Space Mono', 'Fira Code', 'Courier New', monospace;
   --font-sans: 'Inter', system-ui, sans-serif;
-  
-  --animate-glitch: glitch 2s linear infinite;
 }
 
-/* Custom base styles */
 @layer base {
   :root {
     --bg-color: var(--color-bg-light);
     --text-color: var(--color-fg-light);
     --text-muted: var(--color-fg-muted-light);
-    --border-color: #e5e5e5;
+    --border-color: #cbd5e1;
   }
   
   .dark {
     --bg-color: var(--color-bg-dark);
     --text-color: var(--color-fg-dark);
     --text-muted: var(--color-fg-muted-dark);
-    --border-color: #222222;
+    --border-color: #27272a;
   }
 
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-sans);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
     cursor: crosshair;
   }
   
@@ -55,15 +57,11 @@
   }
 }
 
-/* Glitch animation keyframes */
+/* Subtle Glitch animation keyframes */
 @keyframes glitch {
-  2%, 64% {
-    transform: translate(2px, 0) skew(0deg);
-  }
-  4%, 60% {
-    transform: translate(-2px, 0) skew(0deg);
-  }
-  62% {
-    transform: translate(0, 0) skew(5deg); 
-  }
+  0% { transform: translate(0, 0); }
+  2% { transform: translate(-1px, 1px); }
+  4% { transform: translate(1px, -1px); }
+  6% { transform: translate(0, 0); }
+  100% { transform: translate(0, 0); }
 }

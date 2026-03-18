@@ -22,55 +22,78 @@ export default function GlitchBackground() {
     };
     window.addEventListener('resize', resize);
 
-    // Watch Dogs / Matrix style hacker stream
-    const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&*+<>_';
-    const charArray = chars.split('');
-    const fontSize = 14;
-    let columns = Math.floor(width / fontSize);
-    let drops: number[] = [];
-    for (let x = 0; x < columns; x++) {
-      drops[x] = Math.random() * -100; // Start at different heights
+    // Watch Dogs / DedSec node network aesthetics
+    const particles: {x: number, y: number, vx: number, vy: number, size: number}[] = [];
+    const numParticles = Math.min(Math.floor((width * height) / 12000), 80);
+
+    for (let i = 0; i < numParticles; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.8,
+            vy: (Math.random() - 0.5) * 0.8,
+            size: Math.random() * 2 + 1
+        });
     }
 
-    let frame = 0;
     let animationFrameId: number;
 
     const draw = () => {
-      frame++;
-      
-      // Background with trail effect
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+      // Adaptive colors based on theme
+      const isDark = document.documentElement.classList.contains('dark');
+      const bgColor = isDark ? 'rgba(9, 9, 11, 0.15)' : 'rgba(226, 232, 240, 0.15)'; // Trail effect
+      const particleColor = isDark ? 'rgba(0, 255, 255, 0.4)' : 'rgba(15, 23, 42, 0.4)';
+      const lineColor = isDark ? 'rgba(0, 255, 255, 0.1)' : 'rgba(15, 23, 42, 0.08)';
+      const glitchColorCyan = isDark ? 'rgba(0, 255, 255, 0.2)' : 'rgba(15, 23, 42, 0.1)';
+      const glitchColorMagenta = isDark ? 'rgba(255, 0, 255, 0.15)' : 'rgba(226, 29, 72, 0.1)';
+
+      ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, width, height);
 
-      // Main color
-      ctx.fillStyle = 'rgba(0, 255, 255, 0.25)';
-      ctx.font = fontSize + 'px monospace';
+      // Draw and update particles
+      particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
 
-      for (let i = 0; i < drops.length; i++) {
-        // Occasional color glitch
-        if (Math.random() > 0.98) {
-          ctx.fillStyle = 'rgba(255, 0, 255, 0.4)'; // Magenta glitch
-        } else {
-          ctx.fillStyle = 'rgba(0, 255, 255, 0.25)'; // Cyan default
-        }
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
 
-        const text = charArray[Math.floor(Math.random() * charArray.length)];
-        // Random horizontal glitch
-        const xOffset = Math.random() > 0.99 ? (Math.random() - 0.5) * 30 : 0;
-        
-        ctx.fillText(text, i * fontSize + xOffset, drops[i] * fontSize);
+          ctx.fillStyle = particleColor;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+      });
 
-        // Reset drop
-        if (drops[i] * fontSize > height && Math.random() > 0.975) {
-          drops[i] = 0;
-        }
-        drops[i]++;
+      // Draw connections
+      for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < 130) {
+                  ctx.strokeStyle = lineColor;
+                  ctx.lineWidth = 1 - dist / 130;
+                  ctx.beginPath();
+                  ctx.moveTo(particles[i].x, particles[i].y);
+                  ctx.lineTo(particles[j].x, particles[j].y);
+                  ctx.stroke();
+              }
+          }
       }
-      
-      // Random visual glitch horizontal lines
-      if (Math.random() > 0.92) {
-        ctx.fillStyle = Math.random() > 0.5 ? 'rgba(0, 255, 255, 0.1)' : 'rgba(255, 0, 255, 0.1)';
-        ctx.fillRect(0, Math.random() * height, width, Math.random() * 8 + 2);
+
+      // Random glitch effect scanlines
+      if (Math.random() > 0.95) {
+          ctx.fillStyle = Math.random() > 0.5 ? glitchColorCyan : glitchColorMagenta;
+          ctx.fillRect(0, Math.random() * height, width, Math.random() * 4 + 1);
+          
+          if (Math.random() > 0.7) {
+              const sliceY = Math.random() * height;
+              const sliceH = Math.random() * 20 + 5;
+              const imgData = ctx.getImageData(0, sliceY, width, sliceH);
+              const shift = (Math.random() - 0.5) * 20;
+              ctx.putImageData(imgData, shift, sliceY);
+          }
       }
 
       animationFrameId = requestAnimationFrame(draw);
@@ -87,7 +110,7 @@ export default function GlitchBackground() {
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed inset-0 w-full h-full pointer-events-none z-[-2] opacity-40 dark:opacity-30 mix-blend-screen"
+      className="fixed inset-0 w-full h-full pointer-events-none z-[-1] opacity-100 mix-blend-normal transition-opacity duration-500"
     />
   );
 }
