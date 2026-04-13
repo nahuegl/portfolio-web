@@ -131,7 +131,7 @@ export function Hero() {
           {/* Name */}
           <h1
             ref={nameRef}
-            className="gsap-hidden font-display text-5xl md:text-6xl lg:text-7xl font-bold text-light dark:text-light leading-tight mb-4 tracking-tight break-keep"
+            className="gsap-hidden font-display text-5xl md:text-6xl lg:text-6xl font-bold text-light dark:text-light leading-tight mb-4 tracking-tight"
             style={{ perspective: '400px' }}
           >
             Nahuel González

@@ -19,7 +19,6 @@ export function Experience() {
   useEffect(() => {
     if (!listRef.current) return
     const items = listRef.current.querySelectorAll('.timeline-item')
-    const dots = listRef.current.querySelectorAll('.timeline-dot')
 
     gsap.fromTo(
       items,
@@ -37,24 +36,6 @@ export function Experience() {
         },
       }
     )
-
-    // Dots appear with scrub
-    gsap.fromTo(
-      dots,
-      { scale: 0, opacity: 0 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 0.4,
-        stagger: 0.15,
-        ease: 'back.out(2)',
-        scrollTrigger: {
-          trigger: listRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-      }
-    )
   }, [])
 
   return (
@@ -62,14 +43,9 @@ export function Experience() {
       <div className="max-w-4xl mx-auto">
         <SectionHeader title={t('title')} />
 
-        <ol ref={listRef} className="relative border-l border-dark-border/60 pl-8 space-y-10">
+        <ol ref={listRef} className="space-y-6">
           {experience.map((item) => (
-            <li key={item.id} className="timeline-item relative">
-              {/* Animated dot */}
-              <div className="timeline-dot absolute -left-[2.15rem] top-1 w-4 h-4 flex items-center justify-center">
-                <div className="w-2 h-2 bg-cyan rounded-full ring-2 ring-dark ring-offset-0" />
-              </div>
-
+            <li key={item.id} className="timeline-item">
               {/* Content */}
               <div className="glass border border-dark-border/40 bg-dark-surface/40 p-6 rounded-sm hover:border-cyan/20 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">

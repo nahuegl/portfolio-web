@@ -43,13 +43,9 @@ export function Education() {
       <div className="max-w-4xl mx-auto">
         <SectionHeader title={t('title')} />
 
-        <ol ref={listRef} className="relative border-l border-cyan/20 pl-8 space-y-10">
+        <ol ref={listRef} className="space-y-6">
           {education.map((item) => (
-            <li key={item.id} className="edu-item relative">
-              <div className="absolute -left-[2.15rem] top-1 w-4 h-4 flex items-center justify-center">
-                <div className="w-2 h-2 bg-cyan/70 rounded-full ring-2 ring-dark ring-offset-0" />
-              </div>
-
+            <li key={item.id} className="edu-item">
               <div className="glass border border-cyan/10 bg-dark-surface/40 p-6 rounded-sm hover:border-cyan/20 transition-colors duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
