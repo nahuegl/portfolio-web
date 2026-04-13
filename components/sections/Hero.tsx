@@ -39,10 +39,15 @@ export function Hero() {
       const tl = gsap.timeline({ delay: 2.5 })
 
       // Name — SplitText char reveal
-      // First make h1 visible (opacity:0 from gsap-hidden targets the parent,
-      // but animation targets child chars — parent must be transparent to chars)
+      // type:'words,chars' wraps each word in an inline-block container,
+      // preventing mid-word line breaks across character spans
       gsap.set(nameRef.current, { opacity: 1 })
-      const split = new SplitText(nameRef.current, { type: 'chars' })
+      const split = new SplitText(nameRef.current, { type: 'words,chars' })
+      // Ensure word wrappers don't break internally
+      split.words.forEach((word: Element) => {
+        ;(word as HTMLElement).style.whiteSpace = 'nowrap'
+        ;(word as HTMLElement).style.display = 'inline-block'
+      })
       tl.fromTo(
         split.chars,
         { y: 60, opacity: 0, rotateX: -90 },
