@@ -40,10 +40,10 @@ export function GlitchBackground() {
 
     const isDark = resolvedTheme !== 'light'
     const colors = {
-      particle: isDark ? 'rgba(11,211,211,0.65)' : 'rgba(11,211,211,0.35)',
-      connection: isDark ? 'rgba(11,211,211,0.18)' : 'rgba(11,211,211,0.1)',
-      glitch1: isDark ? 'rgba(11,211,211,0.12)' : 'rgba(11,211,211,0.06)',
-      glitch2: isDark ? 'rgba(249,38,114,0.08)' : 'rgba(249,38,114,0.04)',
+      particle: isDark ? 'rgba(11,211,211,0.65)' : 'rgba(8,140,140,0.55)',
+      connection: isDark ? 'rgba(11,211,211,0.18)' : 'rgba(8,140,140,0.20)',
+      glitch1: isDark ? 'rgba(11,211,211,0.12)' : 'rgba(8,140,140,0.10)',
+      glitch2: isDark ? 'rgba(249,38,114,0.08)' : 'rgba(180,20,70,0.07)',
     }
 
     const resize = () => {

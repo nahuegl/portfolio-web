@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Accent colors ── */
 :root {
   --cyan: #0bd3d3;
   --magenta: #f92672;
   --yellow: #f4dd51;
+}
+
+/* ── Dark mode palette (default) ── */
+:root {
+  --color-dark:         9   9  11;   /* #09090b */
+  --color-dark-surface: 17  17  19;  /* #111113 */
+  --color-dark-border:  31  31  35;  /* #1f1f23 */
+  --color-light:       226 232 240;  /* #e2e8f0 */
+  --color-light-surface: 248 250 252; /* #f8fafc */
+  --color-light-border: 203 213 225; /* #cbd5e1 */
+}
+
+/* ── Light mode palette — warm cream ── */
+html:not(.dark) {
+  --color-dark:         242 237 228;  /* #f2ede4 — main bg (cards, sections) */
+  --color-dark-surface: 234 229 220;  /* #eae5dc — surface bg (slightly darker) */
+  --color-dark-border:  190 184 172;  /* #beb8ac — borders, visible warm gray */
+  --color-light:         28  22  14;  /* #1c160e — main text (near-black warm) */
+  --color-light-surface: 248 244 237; /* #f8f4ed — body background */
+  --color-light-border:  165 159 148; /* #a59f94 — secondary borders */
 }
 
 /* Scrollbar */
@@ -18,6 +39,9 @@
 ::-webkit-scrollbar-thumb {
   background: #0bd3d3;
   border-radius: 2px;
+}
+html:not(.dark) ::-webkit-scrollbar-track {
+  background: #eae5dc;
 }
 
 /* Selection */
@@ -42,6 +66,11 @@ html {
 /* Theme transitions */
 body {
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Body text in light mode — override text-dark-surface class */
+html:not(.dark) body {
+  color: #1c160e;
 }
 
 /* Glassmorphism utility */

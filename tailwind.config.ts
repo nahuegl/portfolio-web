@@ -22,14 +22,14 @@ const config: Config = {
           DEFAULT: '#f4dd51',
         },
         dark: {
-          DEFAULT: '#09090b',
-          surface: '#111113',
-          border: '#1f1f23',
+          DEFAULT: 'rgb(var(--color-dark) / <alpha-value>)',
+          surface: 'rgb(var(--color-dark-surface) / <alpha-value>)',
+          border: 'rgb(var(--color-dark-border) / <alpha-value>)',
         },
         light: {
-          DEFAULT: '#e2e8f0',
-          surface: '#f8fafc',
-          border: '#cbd5e1',
+          DEFAULT: 'rgb(var(--color-light) / <alpha-value>)',
+          surface: 'rgb(var(--color-light-surface) / <alpha-value>)',
+          border: 'rgb(var(--color-light-border) / <alpha-value>)',
         },
       },
       fontFamily: {
