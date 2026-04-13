@@ -101,7 +101,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceMono.variable} ${syne.variable}`}
     >
-      <body className="font-body bg-dark text-light antialiased">
+      <body className="font-body antialiased bg-light-surface dark:bg-dark text-dark-surface dark:text-light">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
             {children}
