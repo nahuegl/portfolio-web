@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan: #0bd3d3;
+  --magenta: #f92672;
+  --yellow: #f4dd51;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #0bd3d3;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(11, 211, 211, 0.25);
+  color: #0bd3d3;
+}
+
+/* Cursor */
+* {
+  cursor: crosshair;
+}
+a, button, [role="button"] {
+  cursor: crosshair;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark mode base */
+.dark body {
+  background-color: #09090b;
+  color: #e2e8f0;
+}
+
+/* Light mode base */
+body {
+  background-color: #f8fafc;
+  color: #111113;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Glassmorphism utility */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Neon text glow */
+.glow-cyan {
+  text-shadow: 0 0 20px rgba(11, 211, 211, 0.5);
+}
+.glow-magenta {
+  text-shadow: 0 0 20px rgba(249, 38, 114, 0.5);
+}
+
+/* Terminal blink cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* GSAP initial state — prevents flash before JS loads */
+.gsap-hidden {
+  opacity: 0;
+}

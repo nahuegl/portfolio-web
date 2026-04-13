@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "experience": "Experiencia",
+    "education": "Educación",
+    "certifications": "Certificaciones",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para trabajar",
+    "role": "Frontend Engineer · Analista de Datos",
+    "tagline": "Construyo productos que conectan lógica de negocio con interfaces modernas — desde sistemas corporativos hasta experiencias de cara al cliente.",
+    "cta_work": "Ver Proyectos",
+    "cta_cv": "Descargar CV",
+    "about_title": "Sobre mí",
+    "about_body": "Frontend Developer y Analista de Datos con trayectoria probada en PwC Argentina y Grupo Sancor Seguros. Combino expertise en procesos de negocio con desarrollo de software moderno para generar resultados medibles.",
+    "stack_label": "Stack Técnico"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "present": "Presente"
+  },
+  "education": {
+    "title": "Educación"
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "featured": "Destacadas",
+    "more": "Certificaciones adicionales"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajo Seleccionado",
+    "all": "Todos",
+    "web": "Web",
+    "data": "Datos",
+    "design": "Diseño",
+    "view_code": "Ver Código",
+    "view_live": "Ver Live",
+    "wip": "Más próximamente"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Construyamos algo juntos.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "Mensaje enviado. Te respondo a la brevedad.",
+    "error": "Algo salió mal. Intentá de nuevo o escribime directamente.",
+    "or": "O escribime directamente"
+  },
+  "loading": {
+    "accessing": "ACCEDIENDO AL SISTEMA...",
+    "granted": "ACCESO CONCEDIDO."
+  },
+  "footer": {
+    "built": "Construido con Next.js · GSAP · Tailwind CSS",
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "experience": "Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for work",
+    "role": "Frontend Engineer · Data Analyst",
+    "tagline": "I build products that connect business logic with modern interfaces — from corporate systems to client-facing experiences.",
+    "cta_work": "View Work",
+    "cta_cv": "Download CV",
+    "about_title": "About Me",
+    "about_body": "Frontend Developer and Data Analyst with a proven track record at PwC Argentina and Grupo Sancor Seguros. I combine business process expertise with modern software development to deliver measurable results.",
+    "stack_label": "Tech Stack"
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "featured": "Featured",
+    "more": "Additional Certifications"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Selected Work",
+    "all": "All",
+    "web": "Web",
+    "data": "Data",
+    "design": "Design",
+    "view_code": "View Code",
+    "view_live": "View Live",
+    "wip": "More coming soon"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's build something together.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent. I'll get back to you shortly.",
+    "error": "Something went wrong. Try again or email me directly.",
+    "or": "Or reach me directly"
+  },
+  "loading": {
+    "accessing": "ACCESSING SYSTEM...",
+    "granted": "ACCESS GRANTED."
+  },
+  "footer": {
+    "built": "Built with Next.js · GSAP · Tailwind CSS",
+    "rights": "All rights reserved."
+  }
+}
