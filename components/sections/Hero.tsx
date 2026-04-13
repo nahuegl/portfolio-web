@@ -39,6 +39,9 @@ export function Hero() {
       const tl = gsap.timeline({ delay: 2.5 })
 
       // Name — SplitText char reveal
+      // First make h1 visible (opacity:0 from gsap-hidden targets the parent,
+      // but animation targets child chars — parent must be transparent to chars)
+      gsap.set(nameRef.current, { opacity: 1 })
       const split = new SplitText(nameRef.current, { type: 'chars' })
       tl.fromTo(
         split.chars,
