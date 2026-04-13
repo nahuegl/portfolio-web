@@ -93,13 +93,21 @@ export function Projects() {
               {/* Image */}
               <div className="relative h-52 overflow-hidden bg-dark-border/20">
                 {project.image && (
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  project.image.endsWith('.svg') ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                    />
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  )
                 )}
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">

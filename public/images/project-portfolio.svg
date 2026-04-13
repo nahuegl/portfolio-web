@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#09090b"/>
+      <stop offset="100%" style="stop-color:#111113"/>
+    </linearGradient>
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0bd3d3;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#0bd3d3;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#0bd3d3;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="0" cy="0" r="0.8" fill="#1f1f23" opacity="0.8"/>
+  </pattern>
+  <rect width="800" height="420" fill="url(#grid)"/>
+
+  <!-- Browser frame -->
+  <rect x="60" y="50" width="520" height="320" rx="4" fill="#0a0a0c" stroke="#1f1f23" stroke-width="1"/>
+  <!-- Browser bar -->
+  <rect x="60" y="50" width="520" height="32" rx="4" fill="#111113"/>
+  <rect x="60" y="66" width="520" height="16" fill="#111113"/>
+  <!-- Browser dots -->
+  <circle cx="80" cy="66" r="5" fill="#f92672" opacity="0.8"/>
+  <circle cx="96" cy="66" r="5" fill="#f4dd51" opacity="0.8"/>
+  <circle cx="112" cy="66" r="5" fill="#0bd3d3" opacity="0.8"/>
+  <!-- URL bar -->
+  <rect x="130" y="59" width="340" height="14" rx="2" fill="#1f1f23"/>
+  <text x="145" y="70" font-family="monospace" font-size="8" fill="#0bd3d3" opacity="0.7">nahuelgl-portfolio.vercel.app</text>
+
+  <!-- Navbar inside browser -->
+  <rect x="60" y="82" width="520" height="36" fill="#09090b" opacity="0.95"/>
+  <text x="80" y="106" font-family="monospace" font-size="10" fill="#0bd3d3" font-weight="bold">NG_</text>
+  <text x="420" y="106" font-family="monospace" font-size="8" fill="#e2e8f0" opacity="0.5">work</text>
+  <text x="460" y="106" font-family="monospace" font-size="8" fill="#e2e8f0" opacity="0.5">about</text>
+  <text x="500" y="106" font-family="monospace" font-size="8" fill="#e2e8f0" opacity="0.5">contact</text>
+
+  <!-- Hero area -->
+  <rect x="60" y="118" width="520" height="180" fill="#09090b"/>
+  <!-- Glitch scanline -->
+  <rect x="60" y="118" width="520" height="1" fill="#0bd3d3" opacity="0.15"/>
+
+  <!-- Hero text -->
+  <text x="90" y="155" font-family="sans-serif" font-size="28" font-weight="900" fill="#e2e8f0" letter-spacing="-1">Nahuel González</text>
+  <rect x="90" y="162" width="200" height="1.5" fill="#0bd3d3" opacity="0.4"/>
+  <text x="90" y="182" font-family="monospace" font-size="10" fill="#0bd3d3" opacity="0.8">// Frontend Engineer · Data Analyst</text>
+
+  <text x="90" y="210" font-family="sans-serif" font-size="11" fill="#e2e8f0" opacity="0.45" font-style="italic">Building products at the intersection</text>
+  <text x="90" y="224" font-family="sans-serif" font-size="11" fill="#e2e8f0" opacity="0.45" font-style="italic">of business logic and modern interfaces.</text>
+
+  <!-- CTA buttons -->
+  <rect x="90" y="242" width="90" height="24" fill="#0bd3d3" rx="1"/>
+  <text x="135" y="258" font-family="monospace" font-size="9" fill="#09090b" text-anchor="middle" font-weight="bold">View Work</text>
+  <rect x="192" y="242" width="80" height="24" fill="transparent" stroke="#1f1f23" stroke-width="1" rx="1"/>
+  <text x="232" y="258" font-family="monospace" font-size="9" fill="#e2e8f0" text-anchor="middle" opacity="0.5">Download CV</text>
+
+  <!-- Profile image placeholder -->
+  <rect x="420" y="130" width="120" height="140" rx="2" fill="#1f1f23" stroke="#0bd3d3" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="480" y="205" font-family="monospace" font-size="9" fill="#0bd3d3" text-anchor="middle" opacity="0.4">[ profile ]</text>
+
+  <!-- Bottom section -->
+  <rect x="60" y="298" width="520" height="52" fill="#0d0d0f"/>
+  <text x="90" y="320" font-family="monospace" font-size="7" fill="#0bd3d3" opacity="0.5">// tech stack</text>
+  <rect x="90" y="328" width="52" height="12" rx="2" fill="#0bd3d3" fill-opacity="0.1" stroke="#0bd3d3" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="116" y="338" font-family="monospace" font-size="7" fill="#0bd3d3" text-anchor="middle">Next.js</text>
+  <rect x="150" y="328" width="44" height="12" rx="2" fill="#f92672" fill-opacity="0.1" stroke="#f92672" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="172" y="338" font-family="monospace" font-size="7" fill="#f92672" text-anchor="middle">GSAP</text>
+  <rect x="202" y="328" width="52" height="12" rx="2" fill="#0bd3d3" fill-opacity="0.1" stroke="#0bd3d3" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="228" y="338" font-family="monospace" font-size="7" fill="#0bd3d3" text-anchor="middle">Tailwind</text>
+  <rect x="262" y="328" width="60" height="12" rx="2" fill="#f4dd51" fill-opacity="0.1" stroke="#f4dd51" stroke-width="0.5" stroke-opacity="0.4"/>
+  <text x="292" y="338" font-family="monospace" font-size="7" fill="#f4dd51" text-anchor="middle">TypeScript</text>
+
+  <!-- Side panel - code -->
+  <rect x="610" y="50" width="140" height="320" rx="2" fill="#0a0a0c" stroke="#1f1f23" stroke-width="1"/>
+  <text x="620" y="80" font-family="monospace" font-size="7" fill="#1f1f23">// Hero.tsx</text>
+  <text x="620" y="96" font-family="monospace" font-size="7" fill="#f92672">const</text>
+  <text x="648" y="96" font-family="monospace" font-size="7" fill="#e2e8f0"> Hero </text>
+  <text x="620" y="110" font-family="monospace" font-size="7" fill="#1f1f23">  gsap.from(</text>
+  <text x="620" y="124" font-family="monospace" font-size="7" fill="#0bd3d3">    chars,</text>
+  <text x="620" y="138" font-family="monospace" font-size="7" fill="#f4dd51">    opacity: 0,</text>
+  <text x="620" y="152" font-family="monospace" font-size="7" fill="#f4dd51">    y: 40,</text>
+  <text x="620" y="166" font-family="monospace" font-size="7" fill="#1f1f23">  )</text>
+
+  <!-- Glow line -->
+  <rect x="0" y="209" width="800" height="1" fill="url(#glowCyan)" opacity="0.3"/>
+
+  <!-- Label -->
+  <text x="600" y="404" font-family="monospace" font-size="9" fill="#0bd3d3" opacity="0.4" text-anchor="end">Portfolio Web — Next.js 14 · GSAP · TypeScript</text>
+</svg>
