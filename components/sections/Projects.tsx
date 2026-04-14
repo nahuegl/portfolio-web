@@ -21,10 +21,30 @@ const categories: { key: 'all' | ProjectCategory; label: string }[] = [
   { key: 'design', label: 'design' },
 ]
 
+type ProjectId = 'portfolio-web' | 'data-dashboard' | 'crm-optimization'
+
 export function Projects() {
   const t = useTranslations('projects')
   const [activeCategory, setActiveCategory] = useState<'all' | ProjectCategory>('all')
   const gridRef = useRef<HTMLDivElement>(null)
+
+  const itemTranslations: Record<ProjectId, { tagline: string; description: string; role: string }> = {
+    'portfolio-web': {
+      tagline: t('items.portfolio-web.tagline'),
+      description: t('items.portfolio-web.description'),
+      role: t('items.portfolio-web.role'),
+    },
+    'data-dashboard': {
+      tagline: t('items.data-dashboard.tagline'),
+      description: t('items.data-dashboard.description'),
+      role: t('items.data-dashboard.role'),
+    },
+    'crm-optimization': {
+      tagline: t('items.crm-optimization.tagline'),
+      description: t('items.crm-optimization.description'),
+      role: t('items.crm-optimization.role'),
+    },
+  }
 
   const filtered = projects.filter(
     (p) => activeCategory === 'all' || p.category === activeCategory
@@ -88,91 +108,94 @@ export function Projects() {
 
         {/* Grid */}
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filtered.map((project) => (
-            <article key={project.id} className="project-card group relative overflow-hidden border border-dark-border/60 bg-dark-surface/40 rounded-sm hover:border-cyan/30 transition-all duration-300">
-              {/* Image */}
-              <div className="relative h-52 overflow-hidden bg-dark-border/20">
-                {project.image && (
-                  project.image.endsWith('.svg') ? (
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                    />
-                  ) : (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  )
-                )}
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 border border-cyan/40 text-cyan hover:bg-cyan/10 transition-colors duration-200"
-                      aria-label="View code"
-                    >
-                      <Github size={18} />
-                    </a>
+          {filtered.map((project) => {
+            const tr = itemTranslations[project.id as ProjectId]
+            return (
+              <article key={project.id} className="project-card group relative overflow-hidden border border-dark-border/60 bg-dark-surface/40 rounded-sm hover:border-cyan/30 transition-all duration-300">
+                {/* Image */}
+                <div className="relative h-52 overflow-hidden bg-dark-border/20">
+                  {project.image && (
+                    project.image.endsWith('.svg') ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                      />
+                    ) : (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )
                   )}
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 border border-cyan/40 text-cyan hover:bg-cyan/10 transition-colors duration-200"
-                      aria-label="View live"
-                    >
-                      <ExternalLink size={18} />
-                    </a>
-                  )}
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 border border-cyan/40 text-cyan hover:bg-cyan/10 transition-colors duration-200"
+                        aria-label="View code"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-3 border border-cyan/40 text-cyan hover:bg-cyan/10 transition-colors duration-200"
+                        aria-label="View live"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
+                  </div>
+                  {/* Category badge */}
+                  <span className="absolute top-3 right-3 font-mono text-xs px-2 py-0.5 bg-dark/80 border border-dark-border/60 text-light/40 uppercase tracking-wider">
+                    {project.category}
+                  </span>
                 </div>
-                {/* Category badge */}
-                <span className="absolute top-3 right-3 font-mono text-xs px-2 py-0.5 bg-dark/80 border border-dark-border/60 text-light/40 uppercase tracking-wider">
-                  {project.category}
-                </span>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <p className="font-mono text-xs text-cyan/50 tracking-widest uppercase mb-1">
-                  {project.role}
-                </p>
-                <h3 className="font-display text-xl font-semibold text-light mb-2">
-                  {project.title}
-                </h3>
-                <p className="font-mono text-xs text-magenta/70 mb-3">{project.tagline}</p>
-                <p className="font-body text-sm text-light/50 leading-relaxed mb-4 line-clamp-3">
-                  {project.description}
-                </p>
-
-                {project.metrics && (
-                  <p className="font-mono text-xs text-yellow/60 border-l-2 border-yellow/30 pl-3 mb-4">
-                    {project.metrics}
+                {/* Content */}
+                <div className="p-6">
+                  <p className="font-mono text-xs text-cyan/50 tracking-widest uppercase mb-1">
+                    {tr?.role ?? project.role}
                   </p>
-                )}
+                  <h3 className="font-display text-xl font-semibold text-light mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="font-mono text-xs text-magenta/70 mb-3">{tr?.tagline ?? project.tagline}</p>
+                  <p className="font-body text-sm text-light/50 leading-relaxed mb-4 line-clamp-3">
+                    {tr?.description ?? project.description}
+                  </p>
 
-                {/* Stack */}
-                <div className="flex flex-wrap gap-1.5">
-                  {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="font-mono text-xs px-2 py-0.5 border border-dark-border text-light/30 rounded-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {project.metrics && (
+                    <p className="font-mono text-xs text-yellow/60 border-l-2 border-yellow/30 pl-3 mb-4">
+                      {project.metrics}
+                    </p>
+                  )}
+
+                  {/* Stack */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="font-mono text-xs px-2 py-0.5 border border-dark-border text-light/30 rounded-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
 
         {/* WIP note */}

@@ -18,10 +18,54 @@
   },
   "experience": {
     "title": "Experiencia",
-    "present": "Presente"
+    "present": "Presente",
+    "items": {
+      "pwc": {
+        "role": "Especialista en Contact Center",
+        "period": "Dic 2022 – Jun 2025",
+        "duration": "2 años 7 meses",
+        "location": "Argentina · Híbrido",
+        "description": "Brindé soporte a clientes de EE.UU. en cumplimiento fiscal (Formulario K1) y gestión de cuentas, garantizando altos estándares de precisión regulatoria. Reduje los tiempos de respuesta promedio en un 20% mediante la optimización de flujos de trabajo, manteniendo un puntaje de Satisfacción del Cliente (CSAT) del 95%. Gestioné la calidad de datos en el CRM para asegurar el cumplimiento de métricas y una experiencia de usuario consistente."
+      },
+      "sancor": {
+        "role": "Analista de Operaciones y Procesos de Seguros",
+        "period": "Ene 2013 – Feb 2022",
+        "duration": "9 años 2 meses",
+        "location": "Argentina · Presencial",
+        "description": "Gestioné la evaluación integral de siniestros, coordinando con peritos y aplicando criterios técnicos y legales para una resolución efectiva. Lideré iniciativas de gestión documental y digitalización que garantizaron una organización eficiente de archivos y la transición a procesos sin papel. Supervisé pagos a proveedores y realicé auditorías de facturación, reduciendo el tiempo administrativo en un 30%."
+      },
+      "escribania": {
+        "role": "Asistente Administrativo",
+        "period": "Jul 2011 – Ene 2013",
+        "duration": "1 año 7 meses",
+        "location": "Argentina · Presencial",
+        "description": "Gestioné documentación legal y redacté certificaciones, asegurando el estricto cumplimiento de normativas bancarias y regulatorias. Garanticé el correcto procesamiento de trámites con un alto nivel de precisión y confidencialidad."
+      },
+      "al": {
+        "role": "Asistente Administrativo",
+        "period": "Feb 2008 – Mar 2011",
+        "duration": "3 años 2 meses",
+        "location": "Argentina · Presencial",
+        "description": "Brindé soporte legal-administrativo en expedientes judiciales y organicé documentación legal compleja. Colaboré con equipos legales para garantizar el cumplimiento de los marcos normativos vigentes."
+      }
+    }
   },
   "education": {
-    "title": "Educación"
+    "title": "Educación",
+    "items": {
+      "digital-house": {
+        "degree": "Desarrollador Tecnológico Certificado",
+        "description": "Formación intensiva en desarrollo de software con foco en programación, bases de datos, arquitectura web, UX/UI y metodologías ágiles. El programa se centró en la construcción de soluciones digitales escalables con énfasis en usabilidad, diseño y resolución de problemas complejos."
+      },
+      "coderhouse": {
+        "degree": "Diseñador Web",
+        "description": "Especialización práctica en diseño y construcción de sitios web modernos utilizando HTML, CSS y JavaScript. Principal enfoque en usabilidad, experiencia de usuario (UX) y diseño responsivo."
+      },
+      "uade": {
+        "degree": "Lic. en Diseño Multimedia",
+        "description": "Estudios orientados al diseño gráfico, comunicación visual, creatividad aplicada y producción audiovisual. La formación fortaleció la visión estética, conceptual y técnica en entornos digitales."
+      }
+    }
   },
   "certifications": {
     "title": "Certificaciones",
@@ -37,7 +81,24 @@
     "design": "Diseño",
     "view_code": "Ver Código",
     "view_live": "Ver Live",
-    "wip": "Más próximamente"
+    "wip": "Más próximamente",
+    "items": {
+      "portfolio-web": {
+        "tagline": "Portafolio personal premium construido desde cero",
+        "description": "Diseñé y desarrollé un sitio de portafolio de alta performance con Next.js 14 App Router, animaciones GSAP ScrollTrigger, tematización dark/light, soporte bilingüe (EN/ES) y Core Web Vitals optimizados. El propio proyecto es un caso de estudio en arquitectura frontend premium.",
+        "role": "Frontend Engineer"
+      },
+      "data-dashboard": {
+        "tagline": "Dashboard de inteligencia empresarial para KPIs de seguros",
+        "description": "Dashboard de Power BI que rastrea indicadores clave de rendimiento para operaciones de seguros en Grupo Sancor Seguros. Centralizó métricas de procesamiento de siniestros, seguimiento de pagos a proveedores y progreso de digitalización — reemplazando los reportes manuales en Excel.",
+        "role": "Analista de Datos"
+      },
+      "crm-optimization": {
+        "tagline": "-20% tiempo de respuesta · 95% CSAT en PwC",
+        "description": "Lideré el rediseño de flujos de trabajo del CRM y procesos de ingreso de datos para el Contact Center de PwC Argentina. Identifiqué cuellos de botella en las colas de soporte a clientes de EE.UU. (cumplimiento fiscal Formulario K1), implementé plantillas de respuesta estandarizadas y mejoré las métricas de calidad de datos. Resultó en una reducción del 20% en el tiempo de respuesta promedio y un puntaje CSAT sostenido del 95%.",
+        "role": "Analista de Procesos y Soporte Frontend"
+      }
+    }
   },
   "contact": {
     "title": "Contacto",

@@ -18,10 +18,54 @@
   },
   "experience": {
     "title": "Experience",
-    "present": "Present"
+    "present": "Present",
+    "items": {
+      "pwc": {
+        "role": "Contact Center Specialist",
+        "period": "Dec 2022 – Jun 2025",
+        "duration": "2 yrs 7 mos",
+        "location": "Argentina · Hybrid",
+        "description": "Provided support to US clients on tax compliance (Form K1) and account management, ensuring high standards of regulatory accuracy. Reduced average response times by 20% by optimizing workflows, maintaining a 95% Customer Satisfaction (CSAT) score. Managed data quality in CRM to ensure metric compliance and a consistent user experience."
+      },
+      "sancor": {
+        "role": "Insurance Operations & Process Analyst",
+        "period": "Jan 2013 – Feb 2022",
+        "duration": "9 yrs 2 mos",
+        "location": "Argentina · On-site",
+        "description": "Managed the comprehensive evaluation of claims, coordinating with adjusters and applying technical and legal criteria for effective resolution. Led document management and digitization initiatives ensuring efficient file organization and transition to paperless processes. Monitored vendor payments and performed billing audits, reducing administrative time by 30%."
+      },
+      "escribania": {
+        "role": "Administrative Assistant",
+        "period": "Jul 2011 – Jan 2013",
+        "duration": "1 yr 7 mos",
+        "location": "Argentina · On-site",
+        "description": "Managed legal documentation and drafted certifications, ensuring strict compliance with banking and regulatory standards. Guaranteed the proper processing of procedures with a high level of accuracy and confidentiality."
+      },
+      "al": {
+        "role": "Administrative Assistant",
+        "period": "Feb 2008 – Mar 2011",
+        "duration": "3 yrs 2 mos",
+        "location": "Argentina · On-site",
+        "description": "Provided legal-administrative support for judicial files and organized complex legal documentation. Collaborated with legal teams to ensure compliance with current regulatory frameworks."
+      }
+    }
   },
   "education": {
-    "title": "Education"
+    "title": "Education",
+    "items": {
+      "digital-house": {
+        "degree": "Certified Tech Developer",
+        "description": "Intensive training in software development focusing on programming, databases, web architecture, UX/UI, and agile methodologies. The program centered on building scalable digital solutions with a focus on usability, design, and complex problem-solving."
+      },
+      "coderhouse": {
+        "degree": "Web Designer",
+        "description": "Practical specialization in designing and building modern websites using HTML, CSS, and JavaScript. Main focus on usability, user experience (UX), and responsive design."
+      },
+      "uade": {
+        "degree": "B.A. in Multimedia Design",
+        "description": "Studies focused on graphic design, visual communication, applied creativity, and audiovisual production. Training strengthened aesthetic, conceptual, and technical vision within digital environments."
+      }
+    }
   },
   "certifications": {
     "title": "Certifications",
@@ -37,7 +81,24 @@
     "design": "Design",
     "view_code": "View Code",
     "view_live": "View Live",
-    "wip": "More coming soon"
+    "wip": "More coming soon",
+    "items": {
+      "portfolio-web": {
+        "tagline": "Premium personal portfolio built from scratch",
+        "description": "Designed and built a high-performance portfolio site with Next.js 14 App Router, GSAP ScrollTrigger animations, dark/light theming, bilingual support (EN/ES), and optimized Core Web Vitals. The project itself is a case study in premium frontend architecture.",
+        "role": "Frontend Engineer"
+      },
+      "data-dashboard": {
+        "tagline": "Business intelligence dashboard for insurance KPIs",
+        "description": "Power BI dashboard tracking key performance indicators for insurance operations at Grupo Sancor Seguros. Centralized claims processing metrics, vendor payment tracking, and document digitization progress — replacing manual Excel reporting.",
+        "role": "Data Analyst"
+      },
+      "crm-optimization": {
+        "tagline": "-20% response time · 95% CSAT at PwC",
+        "description": "Led the redesign of CRM workflows and data entry processes for PwC Argentina's Contact Center. Identified bottlenecks in US client support queues (Form K1 tax compliance), implemented standardized response templates, and improved data quality metrics. Resulted in 20% reduction in average response time and sustained 95% CSAT score.",
+        "role": "Process Analyst & Frontend Support"
+      }
+    }
   },
   "contact": {
     "title": "Contact",

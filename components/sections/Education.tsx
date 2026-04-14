@@ -12,9 +12,26 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
 }
 
+type EducationItemId = 'digital-house' | 'coderhouse' | 'uade'
+
 export function Education() {
   const t = useTranslations('education')
   const listRef = useRef<HTMLOListElement>(null)
+
+  const itemTranslations: Record<EducationItemId, { degree: string; description: string }> = {
+    'digital-house': {
+      degree: t('items.digital-house.degree'),
+      description: t('items.digital-house.description'),
+    },
+    coderhouse: {
+      degree: t('items.coderhouse.degree'),
+      description: t('items.coderhouse.description'),
+    },
+    uade: {
+      degree: t('items.uade.degree'),
+      description: t('items.uade.description'),
+    },
+  }
 
   useEffect(() => {
     if (!listRef.current) return
@@ -44,37 +61,40 @@ export function Education() {
         <SectionHeader title={t('title')} />
 
         <ol ref={listRef} className="space-y-6">
-          {education.map((item) => (
-            <li key={item.id} className="edu-item">
-              <div className="glass border border-cyan/10 bg-dark-surface/40 p-6 rounded-sm hover:border-cyan/20 transition-colors duration-300">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
-                  <div>
-                    <h3 className="font-display text-lg font-semibold text-light">{item.degree}</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <GraduationCap size={12} className="text-cyan/60" />
-                      <span className="font-mono text-sm text-cyan">{item.institution}</span>
+          {education.map((item) => {
+            const tr = itemTranslations[item.id as EducationItemId]
+            return (
+              <li key={item.id} className="edu-item">
+                <div className="glass border border-cyan/10 bg-dark-surface/40 p-6 rounded-sm hover:border-cyan/20 transition-colors duration-300">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+                    <div>
+                      <h3 className="font-display text-lg font-semibold text-light">{tr?.degree ?? item.degree}</h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <GraduationCap size={12} className="text-cyan/60" />
+                        <span className="font-mono text-sm text-cyan">{item.institution}</span>
+                      </div>
                     </div>
+                    <p className="font-mono text-xs text-light/40 flex-shrink-0">{item.period}</p>
                   </div>
-                  <p className="font-mono text-xs text-light/40 flex-shrink-0">{item.period}</p>
-                </div>
 
-                <p className="font-body text-sm text-light/55 leading-relaxed mb-4">
-                  {item.description}
-                </p>
+                  <p className="font-body text-sm text-light/55 leading-relaxed mb-4">
+                    {tr?.description ?? item.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-2">
-                  {item.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="font-mono text-xs px-2 py-0.5 border border-cyan/10 text-cyan/50 rounded-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2">
+                    {item.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="font-mono text-xs px-2 py-0.5 border border-cyan/10 text-cyan/50 rounded-sm"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+            )
+          })}
         </ol>
       </div>
     </section>
