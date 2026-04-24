@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 import { caseStudies } from '@/lib/data/caseStudies'
 import { CaseStudyPage } from '@/components/sections/CaseStudyPage'
 
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function Page({ params }: Props) {
+  setRequestLocale(params.locale)
+
   const cs = caseStudies[params.slug]
   if (!cs) notFound()
 

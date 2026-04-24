@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Space_Mono, Syne } from 'next/font/google'
 import { notFound } from 'next/navigation'
-import { NextIntlClientProvider, useMessages } from 'next-intl'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, setRequestLocale } from 'next-intl/server'
 import { ThemeProvider } from '@/components/layout/ThemeProvider'
 import '../globals.css'
 
@@ -83,7 +84,11 @@ export const metadata: Metadata = {
 
 const locales = ['en', 'es']
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -92,8 +97,8 @@ export default function RootLayout({
 }) {
   if (!locales.includes(locale)) notFound()
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const messages = useMessages()
+  setRequestLocale(locale)
+  const messages = await getMessages()
 
   return (
     <html

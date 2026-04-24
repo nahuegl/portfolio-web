@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server'
 import { GlitchBackground } from '@/components/ui/GlitchBackground'
 import { LoadingScreen } from '@/components/ui/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
@@ -9,7 +10,12 @@ import { Projects } from '@/components/sections/Projects'
 import { Contact } from '@/components/sections/Contact'
 import { Footer } from '@/components/layout/Footer'
 
-export default function Home() {
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
+}
+
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale)
   return (
     <>
       <LoadingScreen />
