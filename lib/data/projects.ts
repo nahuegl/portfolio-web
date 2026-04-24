@@ -55,4 +55,31 @@ export const projects: Project[] = [
     category: 'data',
     featured: true,
   },
+  {
+    id: 'pwc-redesign',
+    title: 'PwC Argentina Redesign',
+    tagline: 'Full corporate redesign — editorial, animated, bilingual',
+    description:
+      'Complete redesign of pwc.com.ar respecting PwC global brand identity while elevating the experience with GSAP scroll animations, Lenis smooth scroll, dark/light toggle, and EN/ES bilingual support. Built with Next.js 15 App Router and strict TypeScript.',
+    role: 'Frontend Engineer',
+    stack: ['Next.js 15', 'TypeScript', 'GSAP', 'Lenis', 'Tailwind CSS', 'Vercel'],
+    github: 'https://github.com/nahuegl/pwc-redesign',
+    live: 'https://pwc-redesign.vercel.app',
+    image: '/images/project-pwc.svg',
+    category: 'web',
+    featured: false,
+  },
+  {
+    id: 'sancor-seguros-redesign',
+    title: 'Sancor Seguros Redesign',
+    tagline: 'Corporate insurance web — trilingual, animated, accessible',
+    description:
+      'Full redesign of sancorseguros.com.ar with a modern corporate aesthetic. Features scroll-driven GSAP animations, Framer Motion micro-interactions, Lenis smooth scroll, dark/light theming, and trilingual support (ES/PT/EN) via next-intl.',
+    role: 'Frontend Engineer',
+    stack: ['Next.js 15', 'TypeScript', 'GSAP', 'Framer Motion', 'Lenis', 'next-intl'],
+    github: 'https://github.com/nahuegl/sancor-seguros-redesign',
+    image: '/images/project-sancor.svg',
+    category: 'web',
+    featured: false,
+  },
 ]
