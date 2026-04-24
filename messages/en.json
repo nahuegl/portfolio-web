@@ -97,6 +97,16 @@
         "tagline": "-20% response time · 95% CSAT at PwC",
         "description": "Led the redesign of CRM workflows and data entry processes for PwC Argentina's Contact Center. Identified bottlenecks in US client support queues (Form K1 tax compliance), implemented standardized response templates, and improved data quality metrics. Resulted in 20% reduction in average response time and sustained 95% CSAT score.",
         "role": "Process Analyst & Frontend Support"
+      },
+      "pwc-redesign": {
+        "tagline": "Full corporate redesign — editorial, animated, bilingual",
+        "description": "Complete redesign of pwc.com.ar respecting PwC global brand identity while elevating the experience with GSAP scroll animations, Lenis smooth scroll, dark/light toggle, and EN/ES bilingual support. Built with Next.js 15 App Router and strict TypeScript.",
+        "role": "Frontend Engineer"
+      },
+      "sancor-seguros-redesign": {
+        "tagline": "Corporate insurance web — trilingual, animated, accessible",
+        "description": "Full redesign of sancorseguros.com.ar with a modern corporate aesthetic. Features scroll-driven GSAP animations, Framer Motion micro-interactions, Lenis smooth scroll, dark/light theming, and trilingual support (ES/PT/EN) via next-intl.",
+        "role": "Frontend Engineer"
       }
     }
   },
