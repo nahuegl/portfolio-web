@@ -170,7 +170,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       { value: '1 Source', label: 'of Truth' },
     ],
     stack: ['Power BI', 'DAX', 'SQL', 'Excel', 'Azure'],
-    live: 'https://app-nahuegls-projects.vercel.app',
+    live: 'https://data-analytics-dashboard-nahuegls-projects.vercel.app',
     content: {
       en: {
         period: '2013 — 2022',
