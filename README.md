@@ -1,61 +1,88 @@
-# 🖥️ sys.portfolio.nahuel
+# portfolio-web — Nahuel González
 
-*Interactive & responsive single-page portfolio built with React, Vite, and tailwind_CSS v4.*
-*Portfolio interactivo y responsivo construido con React, Vite y tailwind_CSS v4.*
+**EN** · Premium personal portfolio built with Next.js 14, GSAP, and next-intl. Bilingual (EN/ES), dark/light theming, cinematic scroll animations, and individual case study pages for each project.
 
----
+**ES** · Portfolio personal premium construido con Next.js 14, GSAP y next-intl. Bilingüe (EN/ES), tematización dark/light, animaciones de scroll cinemáticas y páginas de caso de estudio individuales por proyecto.
 
-## 🌎 Overview / Descripción General
-
-**(EN)** 
-This repository contains the source code for my professional portfolio. Designed with a distinct "hacker/cyberpunk" aesthetic inspired by the *Watch Dogs* franchise, it serves as a digital presentation card showcasing my transition into the tech industry, my professional experience as a Frontend Developer & Data Analyst, and my key certifications. The interface includes dynamic 60fps animations, fully responsive components, a unified i18n multi-language system (EN/ES), and a real-time dark/light theme switch featuring animated particle network backgrounds.
-
-**(ES)**
-Este repositorio contiene el código fuente de mi portfolio profesional. Diseñado con una fuerte estética "hacker/cyberpunk" inspirada en los videojuegos de *Watch Dogs*, sirve como una tarjeta de presentación digital mostrando mi transición a la industria tecnológica, mi experiencia trabajando como Desarrollador Frontend y Analista de Datos, junto con mis certificaciones clave. La interfaz cuenta con animaciones dinámicas a 60 cuadros por segundo, es 100% responsiva, e integra un sistema i18n bilingüe nativo (Inglés/Español) y alternancia instantánea de modo claro/oscuro combinada con redes de partículas animadas de fondo.
+🌐 **Live:** [nahuelgl-portfolio.vercel.app](https://nahuelgl-portfolio.vercel.app)
 
 ---
 
-## ⚙️ Tech Stack / Tecnologías Implementadas
+## Stack
 
-- **Framework:** React 18, Vite 8
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4, Custom CSS Animations
-- **Motion:** Framer Motion (Scroll reveal, stagger layouts, and transitions)
-- **i18n:** `i18next`, `react-i18next`
-- **Icons:** `lucide-react`
-- **Deployment:** Vercel
-
----
-
-## ⚡ Core Features / Funcionalidades Clave
-
-- **Dynamic Canvas Background:** A geometric node network (`GlitchBackground.tsx`) animated via HTML5 Canvas that adapts color profiles dynamically to the current Theme.
-- **Bilingual System:** Fully translated JSON architecture (`en.json`, `es.json`) supporting text and dynamic metadata generation.
-- **Glassmorphism & Cyberpunk UI:** Custom UI styling achieving a terminal-like HUD with crosshair cursors and subtle glitches offset.
-- **One-click CV Download:** Easily accessible Resume in PDF format attached directly into the Hero component.
-- **Strictly Typed:** Type-safe development enforcing robust and scalable component bindings.
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 14 (App Router, TypeScript strict) |
+| Styles | Tailwind CSS v3 + CSS custom properties |
+| Animation | GSAP 3 + ScrollTrigger + SplitText |
+| i18n | next-intl 3 · `localePrefix: as-needed` |
+| Theming | CSS variables · dark/light via `[data-theme]` |
+| Deploy | Vercel · auto-deploy from `main` |
 
 ---
 
-## 🚀 Getting Started / Guía de Instalación
+## Features / Funcionalidades
 
-To run this project locally, simply clone the repository and run the development server via NPM.
-Para correr este proyecto localmente, bastará con clonar el repo y ejecutar el servidor usando NPM.
+- **Bilingual EN/ES** — Full translation including metadata, OG images, and aria labels. English at root `/`, Spanish at `/es`.
+- **Case study pages** — Each project has a dedicated `/projects/[slug]` page with problem, context, process steps, and measurable results.
+- **GSAP animations** — SplitText character reveal on hero, ScrollTrigger section reveals, `quickTo` 3D tilt on project cards.
+- **Dark / Light theming** — Warm cream light mode (`#f2ede4`), near-black dark mode. GlitchBackground canvas adapts to active theme.
+- **AI agent projects** — Portfolio includes two domain-expert AI agents: a Claims Analyst Agent (9 yrs Sancor Seguros) and a K-1 Tax Assistant (PwC Argentina).
+- **SVG mockups** — All project images are hand-crafted SVGs — no external image dependencies, perfect scaling.
+
+---
+
+## Local Setup / Instalación
 
 ```bash
-# 1. Clone the repository / Clonar el repositorio
+# Clone
 git clone https://github.com/nahuegl/portfolio-web.git
-
-# 2. Navigate into the directory / Moverse al directorio
 cd portfolio-web
 
-# 3. Install NPM dependencies / Instalar dependencias
-npm install 
-# (Note: if using older NPM verify using --legacy-peer-deps for Tailwind v4 and Vite 8 compatibility)
+# Install (legacy peer deps required)
+npm install
 
-# 4. Start the frontend / Iniciar el entorno de desarrollo
+# Dev server
 npm run dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000).
+
 ---
-*Built with logic, passion & code. / Creado con lógica, pasión y código.*
+
+## Project Structure / Estructura
+
+```
+app/
+  [locale]/
+    page.tsx              # Home — all sections
+    layout.tsx            # Root layout + NextIntlClientProvider
+    projects/
+      [slug]/page.tsx     # Case study pages
+components/
+  sections/               # Hero, Experience, Projects, CaseStudyPage…
+  layout/                 # Navbar, Footer, ThemeProvider
+  ui/                     # SectionHeader, GlitchBackground, LoadingScreen
+lib/data/
+  projects.ts             # Project cards data
+  caseStudies.ts          # Bilingual case study content
+messages/
+  en.json                 # English strings
+  es.json                 # Spanish strings
+public/images/            # SVG project mockups
+```
+
+---
+
+## Deployment / Deploy
+
+Automatic deployment to Vercel on every push to `main`.
+
+```bash
+git push origin main   # → triggers Vercel production build
+```
+
+---
+
+*Built by Nahuel González · Frontend Engineer & AI Engineer · Buenos Aires, Argentina*  
+*[linkedin.com/in/nahuelgl17](https://www.linkedin.com/in/nahuelgl17/) · [glnahuel17@gmail.com](mailto:glnahuel17@gmail.com)*
