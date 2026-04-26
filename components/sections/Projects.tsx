@@ -17,8 +17,8 @@ if (typeof window !== 'undefined') {
 
 type ProjectId =
   | 'portfolio-web'
-  | 'data-dashboard'
-  | 'crm-optimization'
+  | 'claims-analyst-agent'
+  | 'k1-tax-assistant'
   | 'pwc-redesign'
   | 'sancor-seguros-redesign'
 
@@ -66,15 +66,15 @@ export function Projects() {
       description: t('items.portfolio-web.description'),
       role: t('items.portfolio-web.role'),
     },
-    'data-dashboard': {
-      tagline: t('items.data-dashboard.tagline'),
-      description: t('items.data-dashboard.description'),
-      role: t('items.data-dashboard.role'),
+    'claims-analyst-agent': {
+      tagline: t('items.claims-analyst-agent.tagline'),
+      description: t('items.claims-analyst-agent.description'),
+      role: t('items.claims-analyst-agent.role'),
     },
-    'crm-optimization': {
-      tagline: t('items.crm-optimization.tagline'),
-      description: t('items.crm-optimization.description'),
-      role: t('items.crm-optimization.role'),
+    'k1-tax-assistant': {
+      tagline: t('items.k1-tax-assistant.tagline'),
+      description: t('items.k1-tax-assistant.description'),
+      role: t('items.k1-tax-assistant.role'),
     },
     'pwc-redesign': {
       tagline: t('items.pwc-redesign.tagline'),

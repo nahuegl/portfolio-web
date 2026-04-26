@@ -1,0 +1,109 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#07090f"/>
+
+  <!-- Top bar -->
+  <rect width="800" height="44" fill="#0d1117"/>
+  <circle cx="20" cy="22" r="5" fill="#ff5f57"/>
+  <circle cx="36" cy="22" r="5" fill="#febc2e"/>
+  <circle cx="52" cy="22" r="5" fill="#28c840"/>
+  <text x="80" y="27" font-size="11" fill="#0A4494" font-family="monospace" letter-spacing="2">CLAIMS ANALYST AGENT</text>
+  <rect x="660" y="12" width="120" height="20" rx="3" fill="#0A4494" opacity="0.2"/>
+  <text x="720" y="26" font-size="10" fill="#0A4494" text-anchor="middle">● ACTIVE</text>
+
+  <!-- Left panel — Case Input -->
+  <rect x="0" y="44" width="280" height="456" fill="#0a0f1a"/>
+  <rect x="0" y="44" width="280" height="1" fill="#1a2540"/>
+
+  <text x="20" y="76" font-size="10" fill="#0A4494" letter-spacing="2" text-transform="uppercase">CASE INPUT</text>
+  <rect x="20" y="84" width="240" height="1" fill="#1a2540"/>
+
+  <!-- Policy type -->
+  <text x="20" y="108" font-size="9" fill="#4a6fa5">POLICY TYPE</text>
+  <rect x="20" y="114" width="240" height="28" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="32" y="133" font-size="10" fill="#e2e8f0">Comprehensive Home Insurance</text>
+  <text x="248" y="133" font-size="10" fill="#0A4494">▾</text>
+
+  <!-- Claim type -->
+  <text x="20" y="162" font-size="9" fill="#4a6fa5">CLAIM TYPE</text>
+  <rect x="20" y="168" width="240" height="28" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="32" y="187" font-size="10" fill="#e2e8f0">Water Damage — Pipe Burst</text>
+  <text x="248" y="187" font-size="10" fill="#0A4494">▾</text>
+
+  <!-- Damage description -->
+  <text x="20" y="216" font-size="9" fill="#4a6fa5">INCIDENT DESCRIPTION</text>
+  <rect x="20" y="222" width="240" height="80" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="32" y="240" font-size="9" fill="#e2e8f0">Pipe burst in bathroom caused</text>
+  <text x="32" y="254" font-size="9" fill="#e2e8f0">flooding affecting 3 rooms.</text>
+  <text x="32" y="268" font-size="9" fill="#e2e8f0">Floors and walls damaged.</text>
+  <text x="32" y="284" font-size="9" fill="#e2e8f0">Estimated: $8,400 USD</text>
+  <rect x="28" y="286" width="2" height="14" fill="#0A4494" opacity="0.8"/>
+
+  <!-- Policy value -->
+  <text x="20" y="324" font-size="9" fill="#4a6fa5">POLICY COVERAGE LIMIT</text>
+  <rect x="20" y="330" width="115" height="28" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="32" y="349" font-size="10" fill="#e2e8f0">$50,000 USD</text>
+  <rect x="145" y="330" width="115" height="28" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="157" y="349" font-size="10" fill="#e2e8f0">Deductible: $500</text>
+
+  <!-- Attachments -->
+  <text x="20" y="380" font-size="9" fill="#4a6fa5">ATTACHMENTS</text>
+  <rect x="20" y="386" width="240" height="28" rx="3" fill="#0d1520" stroke="#1a2540" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="140" y="405" font-size="9" fill="#4a6fa5" text-anchor="middle">+ Upload photos / docs</text>
+
+  <!-- Analyze button -->
+  <rect x="20" y="430" width="240" height="36" rx="4" fill="#0A4494"/>
+  <text x="140" y="453" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">ANALYZE CLAIM →</text>
+
+  <!-- Divider -->
+  <rect x="280" y="44" width="1" height="456" fill="#1a2540"/>
+
+  <!-- Right panel — Chat -->
+  <rect x="281" y="44" width="519" height="456" fill="#07090f"/>
+
+  <!-- Chat header -->
+  <rect x="281" y="44" width="519" height="40" fill="#0d1117"/>
+  <rect x="295" y="56" width="8" height="8" rx="4" fill="#0A4494"/>
+  <text x="312" y="67" font-size="10" fill="#e2e8f0">Claims Analyst Agent</text>
+  <text x="312" y="78" font-size="8" fill="#4a6fa5">Powered by Claude · Sancor Seguros expertise</text>
+
+  <!-- Agent message 1 -->
+  <rect x="295" y="100" width="460" height="80" rx="4" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <rect x="295" y="100" width="3" height="80" fill="#0A4494" rx="2"/>
+  <text x="308" y="118" font-size="9" fill="#0A4494" letter-spacing="1">COVERAGE ASSESSMENT</text>
+  <text x="308" y="134" font-size="9" fill="#c8d8f0">✓ Pipe burst is a covered peril under Comprehensive Home policy.</text>
+  <text x="308" y="148" font-size="9" fill="#c8d8f0">✓ Water damage to floors and walls falls within structural coverage.</text>
+  <text x="308" y="162" font-size="9" fill="#c8d8f0">✓ Claim amount ($8,400) is within policy limits. Net payable: $7,900.</text>
+  <text x="308" y="176" font-size="9" fill="#4a6fa5">Argentine Civil Code Art. 1757 · Sancor Seg. Clause 4.2.1</text>
+
+  <!-- Agent message 2 -->
+  <rect x="295" y="194" width="460" height="60" rx="4" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <rect x="295" y="194" width="3" height="60" fill="#f4dd51" opacity="0.7" rx="2"/>
+  <text x="308" y="212" font-size="9" fill="#f4dd51" letter-spacing="1">RISK FLAGS</text>
+  <text x="308" y="228" font-size="9" fill="#c8d8f0">⚠ Request adjuster photos — pipe origin must be documented.</text>
+  <text x="308" y="244" font-size="9" fill="#c8d8f0">⚠ Verify maintenance records to rule out pre-existing negligence.</text>
+
+  <!-- Agent message 3 -->
+  <rect x="295" y="268" width="460" height="60" rx="4" fill="#0a1a0a" stroke="#1a3a1a" stroke-width="1"/>
+  <rect x="295" y="268" width="3" height="60" fill="#28c840" opacity="0.7" rx="2"/>
+  <text x="308" y="286" font-size="9" fill="#28c840" letter-spacing="1">RESOLUTION RECOMMENDATION</text>
+  <text x="308" y="302" font-size="9" fill="#c8d8f0">Approve claim subject to adjuster photo submission within 5 business days.</text>
+  <text x="308" y="318" font-size="9" fill="#c8d8f0">Authorize immediate partial payment of $4,000 for urgent repairs.</text>
+
+  <!-- User message -->
+  <rect x="380" y="342" width="375" height="36" rx="4" fill="#0A4494" opacity="0.15" stroke="#0A4494" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="396" y="364" font-size="9" fill="#c8d8f0">Can you generate the formal resolution report?</text>
+
+  <!-- Typing indicator -->
+  <rect x="295" y="392" width="120" height="30" rx="4" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <rect x="295" y="392" width="3" height="30" fill="#0A4494" rx="2"/>
+  <circle cx="320" cy="407" r="3" fill="#0A4494" opacity="0.4"/>
+  <circle cx="332" cy="407" r="3" fill="#0A4494" opacity="0.7"/>
+  <circle cx="344" cy="407" r="3" fill="#0A4494"/>
+
+  <!-- Bottom input -->
+  <rect x="295" y="440" width="460" height="40" rx="4" fill="#0d1520" stroke="#1a2540" stroke-width="1"/>
+  <text x="312" y="464" font-size="9" fill="#4a6fa5">Ask about coverage, legal basis, or request a formal report...</text>
+  <rect x="730" y="450" width="18" height="20" rx="3" fill="#0A4494"/>
+  <text x="739" y="464" font-size="10" fill="#fff" text-anchor="middle">↑</text>
+</svg>

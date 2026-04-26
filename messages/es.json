@@ -89,15 +89,15 @@
         "description": "Diseñé y desarrollé un sitio de portafolio de alta performance con Next.js 14 App Router, animaciones GSAP ScrollTrigger, tematización dark/light, soporte bilingüe (EN/ES) y Core Web Vitals optimizados. El propio proyecto es un caso de estudio en arquitectura frontend premium.",
         "role": "Frontend Engineer"
       },
-      "data-dashboard": {
-        "tagline": "Dashboard de inteligencia empresarial para KPIs de seguros",
-        "description": "Dashboard de Power BI que rastrea indicadores clave de rendimiento para operaciones de seguros en Grupo Sancor Seguros. Centralizó métricas de procesamiento de siniestros, seguimiento de pagos a proveedores y progreso de digitalización — reemplazando los reportes manuales en Excel.",
-        "role": "Analista de Datos"
+      "claims-analyst-agent": {
+        "tagline": "Analista de siniestros IA — 9 años de experiencia, a demanda",
+        "description": "Agente de IA que evalúa siniestros de seguros aplicando criterios técnicos y legales de cobertura. Recibe descripción del caso, tipo de póliza y circunstancias — y entrega una recomendación de resolución estructurada. Construido sobre 9 años de experiencia real en Grupo Sancor Seguros.",
+        "role": "AI Engineer · Experto de Dominio"
       },
-      "crm-optimization": {
-        "tagline": "-20% tiempo de respuesta · 95% CSAT en PwC",
-        "description": "Lideré el rediseño de flujos de trabajo del CRM y procesos de ingreso de datos para el Contact Center de PwC Argentina. Identifiqué cuellos de botella en las colas de soporte a clientes de EE.UU. (cumplimiento fiscal Formulario K1), implementé plantillas de respuesta estandarizadas y mejoré las métricas de calidad de datos. Resultó en una reducción del 20% en el tiempo de respuesta promedio y un puntaje CSAT sostenido del 95%.",
-        "role": "Analista de Procesos y Soporte Frontend"
+      "k1-tax-assistant": {
+        "tagline": "Guía IA para formularios K-1 y K-3 de partnerships",
+        "description": "Asistente de IA que ayuda a inversores a navegar los formularios fiscales Schedule K-1 y K-3. Explica cada campo en lenguaje simple, detecta inconsistencias comunes y guía sobre dónde transferir los valores en la declaración. Respaldado por experiencia real dando soporte a clientes de EE.UU. en PwC Argentina.",
+        "role": "AI Engineer · Experto de Dominio"
       },
       "pwc-redesign": {
         "tagline": "Rediseño corporativo completo — editorial, animado, bilingüe",

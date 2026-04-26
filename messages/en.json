@@ -89,15 +89,15 @@
         "description": "Designed and built a high-performance portfolio site with Next.js 14 App Router, GSAP ScrollTrigger animations, dark/light theming, bilingual support (EN/ES), and optimized Core Web Vitals. The project itself is a case study in premium frontend architecture.",
         "role": "Frontend Engineer"
       },
-      "data-dashboard": {
-        "tagline": "Business intelligence dashboard for insurance KPIs",
-        "description": "Power BI dashboard tracking key performance indicators for insurance operations at Grupo Sancor Seguros. Centralized claims processing metrics, vendor payment tracking, and document digitization progress — replacing manual Excel reporting.",
-        "role": "Data Analyst"
+      "claims-analyst-agent": {
+        "tagline": "AI insurance claims analyst — 9 years of expertise, on demand",
+        "description": "AI agent that evaluates insurance claims by applying technical and legal coverage criteria. Accepts case descriptions, policy type, and circumstances — then delivers a structured resolution recommendation. Built on 9 years of real claims experience at Grupo Sancor Seguros.",
+        "role": "AI Engineer · Domain Expert"
       },
-      "crm-optimization": {
-        "tagline": "-20% response time · 95% CSAT at PwC",
-        "description": "Led the redesign of CRM workflows and data entry processes for PwC Argentina's Contact Center. Identified bottlenecks in US client support queues (Form K1 tax compliance), implemented standardized response templates, and improved data quality metrics. Resulted in 20% reduction in average response time and sustained 95% CSAT score.",
-        "role": "Process Analyst & Frontend Support"
+      "k1-tax-assistant": {
+        "tagline": "AI guide for Schedule K-1 & K-3 partnership forms",
+        "description": "AI assistant that helps investors navigate Schedule K-1 and K-3 partnership tax forms. Explains each field in plain language, detects common inconsistencies, and guides users on where to transfer values in their tax return. Powered by real-world expertise supporting US clients at PwC Argentina.",
+        "role": "AI Engineer · Domain Expert"
       },
       "pwc-redesign": {
         "tagline": "Full corporate redesign — editorial, animated, bilingual",

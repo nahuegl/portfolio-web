@@ -159,239 +159,242 @@ export const caseStudies: Record<string, CaseStudy> = {
     },
   },
 
-  'data-dashboard': {
-    slug: 'data-dashboard',
-    title: 'Data Analytics Dashboard',
-    image: '/images/project-dashboard.svg',
-    accent: '#f4dd51',
+  'claims-analyst-agent': {
+    slug: 'claims-analyst-agent',
+    title: 'Claims Analyst Agent',
+    image: '/images/project-claims.svg',
+    accent: '#0A4494',
     metrics: [
-      { value: '−30%', label: 'Admin Time' },
-      { value: '+2,800', label: 'Claims / Month' },
-      { value: '1 Source', label: 'of Truth' },
+      { value: '9 yrs', label: 'Domain Depth' },
+      { value: 'Claude API', label: 'Powered By' },
+      { value: '<3s', label: 'Avg. Response' },
     ],
-    stack: ['Power BI', 'DAX', 'SQL', 'Excel', 'Azure'],
-    live: 'https://data-analytics-dashboard-nahuegls-projects.vercel.app',
+    stack: ['Next.js', 'Claude API', 'Vercel AI SDK', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/nahuegl/claims-analyst-agent',
+    live: 'https://claims-analyst-agent.vercel.app',
     content: {
       en: {
-        period: '2013 — 2022',
-        company: 'Grupo Sancor Seguros',
+        period: '2025',
+        company: 'Personal AI Project',
         problem:
-          'Insurance operations at Grupo Sancor Seguros relied entirely on manual Excel spreadsheets to track claims processing, vendor payments, and document digitization. Weekly reporting took hours, data was siloed across departments, and decision-making was reactive rather than real-time.',
+          'Insurance claims analysis requires years of domain expertise to do accurately — policy coverage interpretation, technical damage assessment, legal compliance, and resolution recommendation all happen in the same mental model. There\'s no shortcut. The challenge: encode that expertise into an AI agent that performs the workflow reliably, without the analyst.',
         context:
-          'As Operations & Process Analyst, managing over 2,800 insurance claims per month required visibility across multiple operational streams simultaneously. The absence of a centralized data layer made it impossible to identify bottlenecks, track resolution times accurately, or give management a reliable performance picture.',
+          'After 9 years as an Insurance Operations Analyst at Grupo Sancor Seguros — processing over 2,800 claims per month, coordinating with adjusters, and applying technical and legal criteria — the decision workflow was deeply internalized. This project externalizes it into a working AI product built on the Claude API.',
         process: [
           {
-            title: 'Process Audit',
+            title: 'Domain Modeling',
             description:
-              'Mapped the existing Excel-based reporting workflow end-to-end across claims, vendor payments, and digitization tracks. Identified three core pain points: duplicated manual data entry, a 48-hour lag between events and reporting, and no single view linking vendor payment status to claim resolution.',
+              'Translated 9 years of claims evaluation experience into a structured prompt system. Defined the four-stage analysis framework the agent follows: (1) coverage verification against policy type, (2) circumstance-to-cause classification, (3) technical damage assessment, (4) resolution recommendation with legal rationale. Each stage maps to real adjuster decision points.',
           },
           {
-            title: 'Data Modeling',
+            title: 'Agent Architecture',
             description:
-              'Designed a star-schema data model in Power BI connecting operational tables from multiple source systems via SQL queries. Defined DAX measures for the KPIs that operations managers tracked weekly: claims processed, average resolution time (ART), vendor payment aging, and digitization completion rate.',
+              'Built with Next.js App Router and the Vercel AI SDK using Claude as the inference layer. The agent receives structured case input (policy type, insured event, circumstances, damage description) and returns a full analysis in a consistent JSON-structured response — coverage decision, rationale, risk flags, and recommended resolution.',
           },
           {
-            title: 'Dashboard Design',
+            title: 'Chat Interface',
             description:
-              'Built an executive-facing summary page and three operational drill-down views — one per business stream. Prioritized clarity over density: each visual had a single decision it needed to support. Applied conditional formatting to surface SLA breaches without requiring users to interpret raw numbers.',
+              'Designed a two-panel UI: a case intake form on the left (policy fields, incident description, attachments) and a real-time chat with the agent on the right. The agent can ask clarifying questions before issuing a recommendation — simulating the back-and-forth of a real adjuster intake session.',
           },
           {
-            title: 'Adoption & Documentation',
+            title: 'Report Generation',
             description:
-              'Ran onboarding sessions for operations managers and documented the data model, refresh schedule, and KPI definitions. Established a data governance standard for input files to ensure upstream quality didn\'t corrupt downstream metrics.',
+              'After analysis, the agent generates a structured formal report — claim summary, coverage assessment, resolution recommendation, and supporting legal references — formatted for operations manager review. Output mirrors the documentation standard used in real Sancor Seguros claim files.',
           },
         ],
         results: [
           {
-            metric: '−30% admin time',
+            metric: 'End-to-end claims analysis',
             description:
-              'Weekly reporting that previously required manual Excel assembly was replaced with automated Power BI refreshes — saving approximately 6 hours per week across the operations team.',
+              'The agent handles the full evaluation cycle: policy verification, cause classification, damage assessment, and resolution recommendation — without human intervention.',
           },
           {
-            metric: 'Real-time operational visibility',
+            metric: '9 years of domain encoded',
             description:
-              'Management moved from a 48-hour reporting lag to near-real-time dashboards, enabling same-day decisions on escalated claims and overdue vendor payments.',
+              'The prompt system captures real decision logic from Grupo Sancor Seguros operations — not a generic insurance model, but a domain-specific one.',
           },
           {
-            metric: 'Single source of truth',
+            metric: 'Sub-3s average response',
             description:
-              'Three previously siloed data streams — claims, vendor payments, digitization — were unified into one dashboard, eliminating version conflicts between department reports.',
+              'Claude\'s inference speed on the Vercel Edge runtime delivers analysis in under 3 seconds for standard cases, suitable for production use.',
           },
           {
-            metric: '+2,800 claims tracked monthly',
+            metric: 'Formal report output',
             description:
-              'The full claims volume was brought under structured monitoring, with resolution time and outcome tracked per claim type for the first time.',
+              'Every analyzed case generates a structured report ready for review — covering coverage decision, legal basis, and resolution path.',
           },
         ],
       },
       es: {
-        period: '2013 — 2022',
-        company: 'Grupo Sancor Seguros',
+        period: '2025',
+        company: 'Proyecto de IA Personal',
         problem:
-          'Las operaciones de seguros en Grupo Sancor Seguros dependían completamente de planillas Excel manuales para el seguimiento de siniestros, pagos a proveedores y digitalización de documentos. Los reportes semanales demandaban horas, los datos estaban fragmentados entre departamentos y la toma de decisiones era reactiva en lugar de en tiempo real.',
+          'El análisis de siniestros de seguros requiere años de experiencia de dominio para hacerse con precisión — interpretación de cobertura de pólizas, evaluación técnica de daños, cumplimiento legal y recomendación de resolución ocurren dentro del mismo modelo mental. No hay atajos. El desafío: codificar esa experiencia en un agente de IA que ejecute el flujo de trabajo de forma confiable, sin el analista.',
         context:
-          'Como Analista de Operaciones y Procesos, gestionar más de 2.800 siniestros mensuales requería visibilidad simultánea sobre múltiples flujos operativos. La ausencia de una capa de datos centralizada hacía imposible identificar cuellos de botella, medir tiempos de resolución con precisión o dar a la dirección una imagen confiable del rendimiento.',
+          'Tras 9 años como Analista de Operaciones de Seguros en Grupo Sancor Seguros — procesando más de 2.800 siniestros mensuales, coordinando con peritos y aplicando criterios técnicos y legales — el flujo de decisión estaba profundamente internalizado. Este proyecto lo externaliza en un producto de IA funcional construido sobre la API de Claude.',
         process: [
           {
-            title: 'Auditoría de Procesos',
+            title: 'Modelado de Dominio',
             description:
-              'Se mapeó el flujo de reporte basado en Excel de principio a fin, abarcando siniestros, pagos a proveedores y digitalización. Se identificaron tres puntos críticos: carga de datos duplicada y manual, un desfase de 48 horas entre eventos y reportes, y la ausencia de una vista que vinculara el estado de pago a proveedores con la resolución de siniestros.',
+              'Se tradujo la experiencia de 9 años en evaluación de siniestros en un sistema de prompts estructurado. Se definió el framework de análisis de cuatro etapas que sigue el agente: (1) verificación de cobertura según tipo de póliza, (2) clasificación circunstancia-causa, (3) evaluación técnica del daño, (4) recomendación de resolución con fundamento legal. Cada etapa mapea puntos de decisión reales del perito.',
           },
           {
-            title: 'Modelado de Datos',
+            title: 'Arquitectura del Agente',
             description:
-              'Se diseñó un modelo de datos en esquema estrella en Power BI conectando tablas operativas de múltiples sistemas fuente mediante consultas SQL. Se definieron medidas DAX para los KPIs que los gerentes de operaciones monitoreaban semanalmente: siniestros procesados, tiempo promedio de resolución, antigüedad de pagos a proveedores y tasa de completitud de digitalización.',
+              'Construido con Next.js App Router y el Vercel AI SDK usando Claude como capa de inferencia. El agente recibe input estructurado del caso (tipo de póliza, evento asegurado, circunstancias, descripción del daño) y devuelve un análisis completo en una respuesta estructurada en JSON — decisión de cobertura, fundamento, alertas de riesgo y resolución recomendada.',
           },
           {
-            title: 'Diseño del Dashboard',
+            title: 'Interfaz de Chat',
             description:
-              'Se construyó una página de resumen ejecutivo y tres vistas de drill-down operativo — una por flujo de negocio. Se priorizó la claridad sobre la densidad: cada visual soportaba una sola decisión. Se aplicó formato condicional para visibilizar incumplimientos de SLA sin requerir que el usuario interprete números crudos.',
+              'Se diseñó una UI de dos paneles: un formulario de ingreso del caso a la izquierda (campos de póliza, descripción del incidente, archivos adjuntos) y un chat en tiempo real con el agente a la derecha. El agente puede hacer preguntas de clarificación antes de emitir una recomendación — simulando el intercambio real de una sesión de ingreso con un perito.',
           },
           {
-            title: 'Adopción y Documentación',
+            title: 'Generación de Informes',
             description:
-              'Se realizaron sesiones de onboarding para gerentes de operaciones y se documentó el modelo de datos, el esquema de actualización y las definiciones de KPIs. Se estableció un estándar de gobernanza de datos para los archivos fuente para garantizar que la calidad upstream no corrompiera las métricas downstream.',
+              'Tras el análisis, el agente genera un informe formal estructurado — resumen del siniestro, evaluación de cobertura, recomendación de resolución y referencias legales de respaldo — formateado para revisión del gerente de operaciones. El output refleja el estándar de documentación utilizado en los expedientes reales de siniestros de Sancor Seguros.',
           },
         ],
         results: [
           {
-            metric: '−30% tiempo administrativo',
+            metric: 'Análisis de siniestros de principio a fin',
             description:
-              'Los reportes semanales que antes requerían armado manual en Excel fueron reemplazados por actualizaciones automatizadas de Power BI — ahorrando aproximadamente 6 horas semanales en el equipo de operaciones.',
+              'El agente gestiona el ciclo completo de evaluación: verificación de póliza, clasificación de causa, evaluación de daño y recomendación de resolución — sin intervención humana.',
           },
           {
-            metric: 'Visibilidad operativa en tiempo real',
+            metric: '9 años de dominio codificados',
             description:
-              'La dirección pasó de un desfase de 48 horas en los reportes a dashboards en tiempo casi real, habilitando decisiones del mismo día sobre siniestros escalados y pagos vencidos a proveedores.',
+              'El sistema de prompts captura lógica de decisión real de las operaciones de Grupo Sancor Seguros — no un modelo genérico de seguros, sino uno específico del dominio.',
           },
           {
-            metric: 'Única fuente de verdad',
+            metric: 'Respuesta promedio menor a 3s',
             description:
-              'Tres flujos de datos previamente aislados — siniestros, pagos a proveedores, digitalización — se unificaron en un solo dashboard, eliminando conflictos de versiones entre reportes departamentales.',
+              'La velocidad de inferencia de Claude en el Vercel Edge Runtime entrega análisis en menos de 3 segundos para casos estándar, apto para uso en producción.',
           },
           {
-            metric: '+2.800 siniestros monitoreados mensualmente',
+            metric: 'Informe formal como output',
             description:
-              'El volumen total de siniestros quedó bajo monitoreo estructurado, con tiempo de resolución y resultado registrado por tipo de siniestro por primera vez.',
+              'Cada caso analizado genera un informe estructurado listo para revisión — cubriendo decisión de cobertura, base legal y ruta de resolución.',
           },
         ],
       },
     },
   },
 
-  'crm-optimization': {
-    slug: 'crm-optimization',
-    title: 'CRM Workflow Optimization',
-    image: '/images/project-crm.svg',
-    accent: '#f92672',
+  'k1-tax-assistant': {
+    slug: 'k1-tax-assistant',
+    title: 'K-1 Tax Assistant',
+    image: '/images/project-k1.svg',
+    accent: '#D04A02',
     metrics: [
-      { value: '−20%', label: 'Response Time' },
-      { value: '95%', label: 'CSAT' },
-      { value: '−30%', label: 'Admin Load' },
+      { value: 'K-1 + K-3', label: 'Forms Covered' },
+      { value: 'PDF', label: 'Upload Support' },
+      { value: 'Claude API', label: 'Powered By' },
     ],
-    stack: ['CRM', 'Process Design', 'Data Analysis', 'Excel', 'Power BI'],
+    stack: ['Next.js', 'Claude API', 'Vercel AI SDK', 'TypeScript', 'pdf-parse'],
+    github: 'https://github.com/nahuegl/k1-tax-assistant',
+    live: 'https://k1-tax-assistant.vercel.app',
     content: {
       en: {
-        period: '2022 — 2025',
-        company: 'PwC Argentina',
+        period: '2025',
+        company: 'Personal AI Project',
         problem:
-          'PwC Argentina\'s Contact Center was supporting US clients on Form K1 tax compliance — a high-stakes, detail-intensive workflow. Response times were above SLA targets, CRM data quality was inconsistent, and the team had no standardized approach for the most frequent client queries, causing each agent to handle the same questions differently.',
+          'Schedule K-1 and K-3 are among the most misunderstood tax documents in the US system. Partnership investors — many of them non-specialists — receive these forms without clear guidance on what each Box means, where the values go in their return, or what inconsistencies to watch for. Tax professionals are expensive; the form is complex; deadline pressure is real.',
         context:
-          'Form K1 support involves sensitive financial data and regulatory deadlines. Errors or delays in this context have real compliance consequences for clients. With a team handling hundreds of interactions monthly, the lack of process structure was compounding into measurable SLA and satisfaction gaps.',
+          'At PwC Argentina, two years of supporting US clients on Form K1 compliance meant handling these exact questions daily — Box-level explanations, common misreporting patterns, and the cascade effect of errors on the final return. This assistant encodes that support layer into an AI product anyone can access.',
         process: [
           {
-            title: 'Workflow Audit',
+            title: 'Form Mapping',
             description:
-              'Performed a full audit of the CRM support queue — categorized inbound queries by type, volume, and resolution time. Identified that 65% of contacts fell into 20 recurring query patterns, yet each was handled from scratch with no shared template or escalation path. Three bottleneck categories drove 80% of SLA breaches.',
+              'Compiled a complete field-by-field reference for Schedule K-1 (Form 1065) and K-3 — covering all Boxes, their definitions, the IRS instructions, and the most common errors seen in practice. This knowledge base forms the foundation of the agent\'s system prompt and retrieval layer.',
           },
           {
-            title: 'Template System',
+            title: 'PDF Ingestion',
             description:
-              'Designed a library of 20 standardized response templates mapped to the most frequent K1 query types. Each template included: the approved response, links to relevant regulatory references, and a decision tree for edge cases. Templates were reviewed with the compliance team before rollout.',
+              'Implemented PDF upload and parsing using pdf-parse — the user uploads their actual K-1 document, the text is extracted and passed to Claude as context. The agent then analyzes the specific values in the user\'s form, not a generic example. Handles both digital PDFs and OCR-processed scans.',
           },
           {
-            title: 'CRM Data Standards',
+            title: 'Agent Logic',
             description:
-              'Defined and documented CRM data entry standards — field-level rules for case categorization, client tier, query type, and resolution status. Ran a retroactive cleanup of existing records. Implemented a weekly data quality check with automated exception reports.',
+              'Built with the Vercel AI SDK streaming chat interface. The agent follows a structured conversation flow: (1) identify what the user needs — Box explanation, full-form walkthrough, or inconsistency check; (2) respond with the appropriate depth; (3) flag any values that are statistically unusual or conflict with other fields. All responses include the IRS reference code.',
           },
           {
-            title: 'Knowledge Base & Training',
+            title: 'Alert System',
             description:
-              'Built an internal knowledge base consolidating regulatory references, process guides, and the template library. Ran two onboarding sessions for the full team and a condensed version for new agents. Established a feedback loop: agents flagged templates that needed updating, reviewed monthly.',
+              'Implemented a pattern-matching layer that detects common K-1 inconsistencies — mismatched partner percentages, missing foreign income disclosures required by K-3, and Box 20 codes that require additional schedules. Alerts are surfaced inline during the conversation with a specific action recommendation.',
           },
         ],
         results: [
           {
-            metric: '−20% average response time',
+            metric: 'Full K-1 and K-3 coverage',
             description:
-              'Standardized templates eliminated the research phase for common queries, cutting average handling time and bringing response times within SLA targets.',
+              'Every field in Schedule K-1 (Form 1065) and the associated K-3 is covered — definitions, IRS instructions, and transfer guidance to the individual return.',
           },
           {
-            metric: '95% CSAT sustained',
+            metric: 'PDF-aware analysis',
             description:
-              'Customer satisfaction scores reached 95% and were maintained consistently throughout the engagement — measured via post-interaction surveys on a rolling 30-day basis.',
+              'The agent reads the user\'s actual form values — not hypothetical examples — delivering specific, actionable guidance rather than generic tax information.',
           },
           {
-            metric: '−30% administrative overhead',
+            metric: 'Inconsistency detection',
             description:
-              'CRM data standards and template adoption reduced per-case administrative burden — agents spent less time formatting responses and logging case details manually.',
+              'Automated pattern matching flags common errors and missing disclosures before they become filing problems — replicating the compliance-check role performed daily at PwC.',
           },
           {
-            metric: 'Team-wide adoption',
+            metric: 'Plain-language explanations',
             description:
-              'The template system and CRM standards were adopted by the full Contact Center team, not just the K1 queue — extending the process improvement beyond the original scope.',
+              'Complex partnership tax concepts are translated into clear investor-facing language — the same communication standard maintained during 2+ years of client support at PwC Argentina.',
           },
         ],
       },
       es: {
-        period: '2022 — 2025',
-        company: 'PwC Argentina',
+        period: '2025',
+        company: 'Proyecto de IA Personal',
         problem:
-          'El Contact Center de PwC Argentina brindaba soporte a clientes de EE.UU. en el cumplimiento fiscal del Formulario K1 — un flujo de trabajo de alto riesgo y gran detalle. Los tiempos de respuesta superaban los objetivos de SLA, la calidad de datos en el CRM era inconsistente, y el equipo no tenía un enfoque estandarizado para las consultas más frecuentes, haciendo que cada agente resolviera las mismas preguntas de manera diferente.',
+          'Los formularios Schedule K-1 y K-3 se encuentran entre los documentos fiscales más mal comprendidos del sistema estadounidense. Los inversores en partnerships — muchos de ellos no especialistas — reciben estos formularios sin orientación clara sobre qué significa cada casilla, dónde van los valores en su declaración, o qué inconsistencias vigilar. Los profesionales impositivos son costosos; el formulario es complejo; la presión de los plazos es real.',
         context:
-          'El soporte del Formulario K1 involucra datos financieros sensibles y fechas límite regulatorias. Los errores o demoras en este contexto tienen consecuencias de cumplimiento reales para los clientes. Con un equipo manejando cientos de interacciones mensuales, la falta de estructura de proceso se estaba convirtiendo en brechas medibles de SLA y satisfacción.',
+          'En PwC Argentina, dos años dando soporte a clientes de EE.UU. en cumplimiento fiscal del Formulario K1 significó responder exactamente estas preguntas diariamente — explicaciones a nivel de casilla, patrones comunes de declaración incorrecta y el efecto en cascada de los errores en la declaración final. Este asistente codifica esa capa de soporte en un producto de IA accesible para cualquiera.',
         process: [
           {
-            title: 'Auditoría del Flujo de Trabajo',
+            title: 'Mapeo del Formulario',
             description:
-              'Se realizó una auditoría completa de la cola de soporte en el CRM — las consultas entrantes se categorizaron por tipo, volumen y tiempo de resolución. Se identificó que el 65% de los contactos correspondían a 20 patrones de consulta recurrentes, pero cada uno se gestionaba desde cero sin plantilla ni ruta de escalamiento compartida. Tres categorías de cuellos de botella generaban el 80% de los incumplimientos de SLA.',
+              'Se compiló una referencia campo por campo completa para el Schedule K-1 (Formulario 1065) y K-3 — cubriendo todas las casillas, sus definiciones, las instrucciones del IRS y los errores más comunes observados en la práctica. Esta base de conocimiento forma el fundamento del system prompt y la capa de recuperación del agente.',
           },
           {
-            title: 'Sistema de Plantillas',
+            title: 'Ingesta de PDF',
             description:
-              'Se diseñó una biblioteca de 20 plantillas de respuesta estandarizadas mapeadas a los tipos de consulta K1 más frecuentes. Cada plantilla incluía: la respuesta aprobada, vínculos a referencias regulatorias relevantes y un árbol de decisión para casos límite. Las plantillas fueron revisadas con el equipo de compliance antes del lanzamiento.',
+              'Se implementó carga y parseo de PDF usando pdf-parse — el usuario sube su documento K-1 real, el texto es extraído y pasado a Claude como contexto. El agente analiza los valores específicos en el formulario del usuario, no un ejemplo genérico. Maneja tanto PDFs digitales como escaneos procesados con OCR.',
           },
           {
-            title: 'Estándares de Datos en CRM',
+            title: 'Lógica del Agente',
             description:
-              'Se definieron y documentaron estándares de carga de datos en el CRM — reglas a nivel de campo para categorización de casos, tier de cliente, tipo de consulta y estado de resolución. Se realizó una limpieza retroactiva de registros existentes. Se implementó un control semanal de calidad de datos con reportes de excepciones automatizados.',
+              'Construido con la interfaz de chat en streaming del Vercel AI SDK. El agente sigue un flujo de conversación estructurado: (1) identificar qué necesita el usuario — explicación de casilla, recorrido completo del formulario o verificación de inconsistencias; (2) responder con la profundidad apropiada; (3) marcar valores estadísticamente inusuales o que conflictúen con otros campos. Todas las respuestas incluyen el código de referencia del IRS.',
           },
           {
-            title: 'Base de Conocimiento y Capacitación',
+            title: 'Sistema de Alertas',
             description:
-              'Se construyó una base de conocimiento interna consolidando referencias regulatorias, guías de proceso y la biblioteca de plantillas. Se realizaron dos sesiones de onboarding para el equipo completo y una versión condensada para agentes nuevos. Se estableció un circuito de feedback: los agentes marcaban las plantillas que necesitaban actualización, revisadas mensualmente.',
+              'Se implementó una capa de coincidencia de patrones que detecta inconsistencias comunes del K-1 — porcentajes de socios no coincidentes, declaraciones de ingresos extranjeros faltantes requeridas por el K-3 y códigos de la Casilla 20 que requieren schedules adicionales. Las alertas se muestran en línea durante la conversación con una recomendación de acción específica.',
           },
         ],
         results: [
           {
-            metric: '−20% tiempo de respuesta promedio',
+            metric: 'Cobertura completa K-1 y K-3',
             description:
-              'Las plantillas estandarizadas eliminaron la fase de investigación para consultas frecuentes, reduciendo el tiempo de gestión promedio y llevando los tiempos de respuesta dentro de los objetivos de SLA.',
+              'Cada campo del Schedule K-1 (Formulario 1065) y el K-3 asociado está cubierto — definiciones, instrucciones del IRS y guía de transferencia a la declaración individual.',
           },
           {
-            metric: '95% CSAT sostenido',
+            metric: 'Análisis consciente del PDF',
             description:
-              'Los puntajes de satisfacción del cliente alcanzaron el 95% y se mantuvieron de forma consistente durante todo el engagement — medidos mediante encuestas post-interacción en una base móvil de 30 días.',
+              'El agente lee los valores reales del formulario del usuario — no ejemplos hipotéticos — entregando orientación específica y accionable en lugar de información fiscal genérica.',
           },
           {
-            metric: '−30% carga administrativa',
+            metric: 'Detección de inconsistencias',
             description:
-              'Los estándares de datos en el CRM y la adopción de plantillas redujeron la carga administrativa por caso — los agentes gastaban menos tiempo dando formato a respuestas y registrando detalles de casos manualmente.',
+              'La coincidencia de patrones automatizada señala errores comunes y declaraciones faltantes antes de que se conviertan en problemas de presentación — replicando el rol de verificación de compliance realizado diariamente en PwC.',
           },
           {
-            metric: 'Adopción en todo el equipo',
+            metric: 'Explicaciones en lenguaje simple',
             description:
-              'El sistema de plantillas y los estándares de CRM fueron adoptados por el equipo completo del Contact Center, no solo la cola K1 — extendiendo la mejora de procesos más allá del alcance original.',
+              'Los conceptos fiscales complejos de partnerships se traducen a lenguaje claro dirigido al inversor — el mismo estándar de comunicación mantenido durante más de 2 años de soporte a clientes en PwC Argentina.',
           },
         ],
       },
